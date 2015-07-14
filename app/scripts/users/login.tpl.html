@@ -1,11 +1,29 @@
+<div class="loginpage">
+
+
+<h2>Please Log-in to SS Live</h2>
+
 <form ng-submit="loginUser(userObj)">
   <br />
 
+  	<md-input-container class="inputlog">
+        <label>Email</label>
+   <input type="text" ng-model="userObj.username"/><br />
+
+      </md-input-container>
+      <md-input-container class="inputlog">
+        <label>Password</label>
   
-  <input type="text" ng-model="userObj.username" placeholder="Enter Email"/><br />
-  <input type="password" ng-model="userObj.password" placeholder="Enter Password"/><br />
-  <button>Login</button>
+  <input type="password" ng-model="userObj.password"/><br />
+      </md-input-container>
+ 
+
+ <div class="buttonlog">
+ <md-button class="md-raised">Login</md-button>
+ </div>
 </form>
 
 
+
+</div>
 <!-- <small><a href="/#/register">Sign up</a></small> -->
