@@ -1,34 +1,52 @@
- // Bourbon & Neat
-@import '../../bower_components/bourbon/dist/bourbon';
-@import '../../bower_components/neat/app/assets/stylesheets/neat';
-
-body{
-  // background-color: hsla(0,0%,63%,0.4);
-  font-family: 'Karla', sans-serif;
-}
-
-.container {}
-
-//Login Page
-.loginpage {
-	padding-top: 15%;
-    margin: 0 auto;
-    h2 {
-        color: #65666b;
-        margin: 0;
-        text-align: center;
-    }
-    .inputlog {
-        width: 250px;
+// Bourbon & Neat
+ @import '../../bower_components/bourbon/dist/bourbon';
+ @import '../../bower_components/neat/app/assets/stylesheets/neat';
+ body {
+     // background-color: hsla(0,0%,63%,0.4);
+     font-family: 'Karla', sans-serif;
+ }
+ 
+ .container {
+    clear: both;
+ }
+ 
+ //Login Page
+ .loginpage {
+     padding-top: 15%;
+     margin: 0 auto;
+     h2 {
+         color: #65666b;
+         margin: 0;
+         text-align: center;
+         font-size: 2rem;
+     }
+     .inputlog {
+         width: 250px;
+         margin: 0 auto;
+     }
+     .buttonlog {
         margin: 0 auto;
-    }
+        text-align: center;
+     }
+        
+     
+ }
 
-    .buttonlog {
-	text-align: center;
 
-    .md-button.md-raised:not([disabled]) {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-}
-}
-
-}
+ 
+ header {
+     height: 60px;
+     padding-top: 10px;
+     background-color: #f6f6f6;
+     border-bottom: solid 1px #dfdfdf;
+     .head-left {
+         float: left;
+         h1 {
+             display: inline;
+         }
+     }
+     .head-right {
+         float: right;
+         padding-right: 15px;
+     }
+ }
