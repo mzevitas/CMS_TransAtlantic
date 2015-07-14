@@ -36,6 +36,11 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule'])
 		        url: '/portal',
 		        templateUrl: 'views/portal.tpl.html'
 
+		      })
+
+		      .state('portal.dashboard', {
+		      	url:'/dashboard',
+		      	templateUrl: 'views/dash.tpl.html'
 		      });
 		     
 		      
