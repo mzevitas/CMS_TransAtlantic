@@ -17,7 +17,7 @@
         var addGig = function(gigObj) {
             return $http.post(PARSE.URL + 'classes/gigs', gigObj, PARSE.CONFIG)
                 .success(function() {
-                    $state.go('portal.gigs');
+                    $state.go('portal');
 
                 });
         };

@@ -75,3 +75,25 @@
 
 
 
+.portal-left{
+    h2{
+        text-align: center;
+        color: #65666b;
+    }
+}
+ .listGigs {
+
+    width: 320px;
+    height: 180px;
+    text-align: center;
+        color: #65666b;
+
+    overflow: auto;
+    box-shadow: 1px 1px 1px 1px hsla(360,5%,8%,0.5);
+    margin-left: 18px;
+    padding: 5px;
+    float: left;
+ }
+
+
+

@@ -38,12 +38,12 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
 
 		      })
 
-		      .state('portal.gigs', {
-		      	url:'/gigs',
-		      	templateUrl: 'scripts/gigs/gigs.tpl.html',
-		      	controller: 'GigCtrl'
-		      })
-		      .state('portal.gigs.addgig', {
+		      // .state('portal.gigs', {
+		      // 	url:'/gigs',
+		      // 	templateUrl: 'scripts/gigs/gigs.tpl.html',
+		      // 	controller: 'GigCtrl'
+		      // })
+		      .state('portal.addgig', {
 		      	url:'/addgig',
 		      	templateUrl: 'scripts/gigs/add.gig.tpl.html'
 		      });

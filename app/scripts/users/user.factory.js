@@ -19,6 +19,7 @@
         var user = currentUser();
         if (data) {
           PARSE.CONFIG.headers['X-PARSE-Session-Token'] = data.sessionToken;
+
         }
       };
 
@@ -45,8 +46,10 @@
           params: userObj
         }).success (function (res) {
           console.log(res);
+
           currentUser(res);
           $state.go('portal');
+      
 
         });
         
