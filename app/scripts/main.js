@@ -38,9 +38,14 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
 
 		      })
 
-		      .state('portal.dashboard', {
-		      	url:'/dashboard',
-		      	templateUrl: 'views/dash.tpl.html'
+		      .state('portal.gigs', {
+		      	url:'/gigs',
+		      	templateUrl: 'scripts/gigs/gigs.tpl.html',
+		      	controller: 'GigCtrl'
+		      })
+		      .state('portal.gigs.addgig', {
+		      	url:'/addgig',
+		      	templateUrl: 'scripts/gigs/add.gig.tpl.html'
 		      });
 		     
 		      
