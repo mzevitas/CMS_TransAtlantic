@@ -87,9 +87,10 @@
 
     }
 }
- .listGigs {
 
-    width: 300px;
+.listGigs {
+
+    width: 310px;
     height: 200px;
     text-align: center;
         color: #65666b;
@@ -101,6 +102,40 @@
     padding: 5px;
     float: left;
  }
+
+
+.portal-sets{
+        margin: 0 auto;
+        clear: both;
+    h2{
+        text-align: center;
+        color: #65666b;
+
+    }
+}
+
+.listsets {
+
+    width: 310px;
+    height: 230px;
+    text-align: center;
+        color: #65666b;
+
+    overflow: auto;
+    box-shadow: 1px 1px 1px 2px hsla(360,5%,8%,0.3);
+    margin-left: 18px;
+    margin-top: 8px;
+    padding: 5px;
+    float: left;
+ }
+
+
+
+footer{
+    clear:both;
+    height: 100px;
+}
+ 
 
 
 

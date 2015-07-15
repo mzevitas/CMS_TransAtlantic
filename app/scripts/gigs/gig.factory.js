@@ -33,7 +33,9 @@
                  };
 
                 var deleteGigs = function(id) {
-                    return $http.delete(PARSE.URL + 'classes/gigs/' + id, PARSE.CONFIG);
+                    return $http.delete(PARSE.URL + 'classes/gigs/' + id, PARSE.CONFIG).success(function(){
+                        $state.go('portal');
+                    });
                 };
 
                 return {

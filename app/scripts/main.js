@@ -47,7 +47,26 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
 		      .state('portal.addgig', {
 		      	url:'/addgig',
 		      	templateUrl: 'scripts/gigs/add.gig.tpl.html'
-		      });
+		      })
+
+
+		      .state('portal.singleSet', {
+		      	url: '/singleSet/{id}',
+               templateUrl: 'scripts/sets/single.edit.sets.tpl.html',
+               controller: 'SingleSetCtrl'
+				})
+
+		      .state('portal.download', {
+		      	url: '/singleSetdownload/{id}',
+               templateUrl: 'scripts/sets/download.pdf.tpl.html',
+               controller: 'SingleSetCtrl'
+				})
+		      
+		      .state('portal.addset', {
+		      	url:'/addset',
+		      	templateUrl: 'scripts/sets/add.sets.tpl.html'
+		      })
+
 		     
 		      
 

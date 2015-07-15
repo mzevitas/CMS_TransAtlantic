@@ -1,0 +1,29 @@
+<div class="addset">
+    <h1>Add A New Set</h1>
+    <form class="addformset" ng-submit="addSet(s)" ng-controller="SetCtrl" >
+
+	<!-- Enter Venues Name -->
+    <md-input-container class="setsAdd">
+        <label>Set Title ie: Fado Set 1</label>
+        <input type="text" ng-model="s.setTitle"/>
+      </md-input-container>
+
+      <md-input-container class="setsAdd">
+        <label>Gig Date</label>
+        <input type="text" ng-model="s.setDate"/>
+      </md-input-container>
+      <md-input-container class="setsAdd">
+        <label>Length of Set</label>
+        <input type="text" ng-model="s.setLength"/>
+      </md-input-container>
+      <md-input-container class="setsAdd">
+    <label>Songs</label>
+      <textarea ng-model="s.song" aria-label="song" style="text-align: center;"></textarea>
+      </md-input-container>
+
+
+
+
+<md-button class="md-raised">Add Set</md-button>
+
+</form>

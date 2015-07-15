@@ -1,0 +1,49 @@
+<div id="content" class="singleformset" ng-controller="SetCtrl" style="text-align: center;">
+
+
+<h3>{{ s.setTitle }}</h3> 
+<p>{{ s.setDate }} </p>
+<p>{{ s.setLength }} </p>
+<textarea readonly rows="22" style="margin: 4px; text-align: center; border: none;">{{ s.song }} </textarea>
+
+	
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="editor"></div>
+<button id="cmd">generate PDF</button>
+
+
+
+<script>
+  
+  var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return false;
+    }
+};
+
+$('#cmd').click(function () {
+    doc.fromHTML($('#content').get(0), 15, 15, {
+        'width': 170,
+        'elementHandlers': specialElementHandlers
+    });
+    doc.save('setlist.pdf');
+});
+</script>

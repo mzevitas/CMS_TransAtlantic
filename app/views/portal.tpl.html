@@ -1,50 +1,52 @@
 <div ng-include="'templates/header.tpl.html'" ></div>
 
 <br>
-<!-- <div class="welcome" ng-controller="UserCtrl">
-	<h4>Welcome {{ s.username }}</h4>
-
-</div -->
-
 
 <div class="container" ui-view> 
+	<div class="portal-left" ng-controller="GigCtrl">
+	    <h2>Upcoming Gigs</h2>
+	    <hr>
+	    <br>
+	    <div class="portalmain">
+	        <!-- <a ui-sref=".single"> -->
+	        <div class="listGigs" ng-repeat=" g in gigs | orderBy: 'serialnumber'" id="{{ g.objectId }}">
+	            <h4 style="margin: 0;">{{ g.venueName}}</h4>
+	            <hr>
+	            <p style="margin: 4px;">{{ g.date}} at {{g.time}}</p>
+	            <p style="margin: 4px;">{{ g.address}} {{g.city}}, {{g.state}}, {{g.zip}}</p>
+	            <p style="margin: 4px;">Load-in: {{ g.loadin}} || Sound Check: {{g.soundcheck}}</p>
+	            <p style="margin: 4px;"><a href="{{g.website}}">{{g.venueName}}'s Website</a></p>
+	            <a ui-sref="portal.single({id: g.objectId})">
+	                <md-button class="md-raised">Edit Gig</md-button>
+	            </a>
+	        </div>
+	    </div>
+	</div>
+	
+	<div class="portal-sets" ng-controller="SetCtrl">
+	    <h2>Set List</h2>
+	    <hr>
+	    <br>
+	    <div class="portalmain">
+	        <!-- <a ui-sref=".single"> -->
+	        <div class="listsets" ng-repeat=" s in sets | orderBy: 'songNum'" id="{{ s.objectId }}">
+	            <h4 style="margin: 0;">{{s.setTitle}}</h4>
+	            <p style="margin: 4px;">{{ s.setDate }} </p>
+	            <p style="margin: 4px;">{{ s.setLength }} </p>
+	            <textarea disabled rows="4" style="margin: 4px; text-align: center; border: 1px solid #d2d2d2;">{{ s.song }} </textarea>
 
-<div class="portal-left" ng-controller="GigCtrl">
-<h2>Upcoming Gigs</h2>
-<hr>
+<br>
+	            
+	            
+	            <a ui-sref="portal.singleSet({id: s.objectId})">
+	                <md-button class="md-raised">Edit Set</md-button>
+	            </a>
+	        </div>
+	    </div>
+	</div>
+</div>
+
+
 <br>
 
-<div class="portalmain">
-<!-- <a ui-sref=".single"> -->
-
-<div class="listGigs" ng-repeat=" g in gigs | orderBy: 'serialnumber'"  id="{{ g.objectId }}">
-
-		<h4 style="margin: 0;">{{ g.venueName}}  
-</h4>
-		<hr>
-		<p style="margin: 4px;">{{ g.date}} at {{g.time}}</p>
-		<p style="margin: 4px;">{{ g.address}}  {{g.city}}, {{g.state}}, {{g.zip}}</p>
-		<p style="margin: 4px;">Load-in:{{ g.loadin}} || Sound Check:{{g.soundcheck}}</p>
-		<p style="margin: 4px;"><a href="{{g.website}}">{{g.venueName}}'s Website</a></p>
-
-           <a ui-sref="portal.single({id: g.objectId})">
-
-<md-button class="md-raised">Edit Gig</md-button>
-
-	
-	</a>
-	</div>
-	</div>
-</div>
-
-
-
-
-
-
-
-
-
-</div>
-
-<!-- <div ng-include="'templates/footer.tpl.html'" ></div> -->
+<div ng-include="'templates/footer.tpl.html'" ></div>
