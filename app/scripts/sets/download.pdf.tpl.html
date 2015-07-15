@@ -1,18 +1,19 @@
 <div id="content" class="singleformset" ng-controller="SetCtrl" style="text-align: center;">
 
-
 <h3>{{ s.setTitle }}</h3> 
 <p>{{ s.setDate }} </p>
 <p>{{ s.setLength }} </p>
-<textarea readonly rows="22" style="margin: 4px; text-align: center; border: none;">{{ s.song }} </textarea>
 
-	
 
+    <br>
+<div class="convertingstuff"></div>
+
+<textarea  class="textremove" rows="22" style="margin: 4px; text-align: center; border: none;">{{ s.song }} </textarea>
 </div>
 
 
 
-
+<button id="down"> ↓</button>
 
 
 
@@ -31,6 +32,15 @@
 
 
 <script>
+
+ $("#down").click(function() {
+    $(".convertingstuff").text($("textarea").val());
+}).next().click(function () {
+    $("textarea").val($(".convertingstuff").text());
+
+});
+
+
   
   var doc = new jsPDF();
 var specialElementHandlers = {

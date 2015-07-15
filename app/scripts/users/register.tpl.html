@@ -1,12 +1,26 @@
+<div class="loginpage">
+
 <h2>Create An Account</h2>
 
 <form ng-submit="registerUser(userObj)">
-  <input ng-model="userObj.username" type="email" placeholder="Email">
+ <md-input-container class="inputlog">
+        <label>Name</label>
+  <input type="text" ng-model="userObj.name"/><br />
+      </md-input-container>
 
-  
-  <input ng-model="userObj.name" type="text" placeholder="First Name">
-  <input ng-model="userObj.password" type="password" placeholder="Password">
-  <!-- <input ng-model="userObj.password" type="password" placeholder="Confirm Password"> -->
+<md-input-container class="inputlog">
+        <label>Email</label>
+   <input type="text" ng-model="userObj.username"/><br />
 
-  <button>Sign-Up</button>
+      </md-input-container>
+      <md-input-container class="inputlog">
+        <label>Password</label>
+  <input type="password" ng-model="userObj.password"/><br />
+      </md-input-container>
+ 
+  <div class="buttonlog">
+ <md-button class="md-raised">Sign-Up</md-button>
+ </div>
 </form>
+
+</div>

@@ -5,6 +5,9 @@
 
  body {
      font-family: 'Karla', sans-serif;
+     h1{
+        color: #65666b;
+     }
  }
  
  .container {
@@ -13,6 +16,7 @@
     margin: 0 auto;
 
  }
+ .convertingstuff { white-space: pre; }
  
  //Login Page Styles
  .loginpage {
@@ -78,12 +82,15 @@
 
 .portalmain{
     margin-left: 38px;
+   margin-bottom: 50px;
 }
 .portal-left{
         margin: 0 auto;
     h2{
         text-align: center;
         color: #65666b;
+        font-size: 2.5rem;
+        margin:0;
 
     }
 }
@@ -97,8 +104,9 @@
 
     overflow: auto;
     box-shadow: 1px 1px 1px 2px hsla(360,5%,8%,0.3);
-    margin-left: 18px;
-    margin-top: 8px;
+     margin-left: 5%;
+  margin-bottom: 29px;
+
     padding: 5px;
     float: left;
  }
@@ -107,9 +115,13 @@
 .portal-sets{
         margin: 0 auto;
         clear: both;
+          // padding-top: 32px;
+
     h2{
         text-align: center;
         color: #65666b;
+        font-size: 2.5rem;
+        margin:0;
 
     }
 }
@@ -123,8 +135,8 @@
 
     overflow: auto;
     box-shadow: 1px 1px 1px 2px hsla(360,5%,8%,0.3);
-    margin-left: 18px;
-    margin-top: 8px;
+    margin-left: 5%;
+    margin-top: 29px;
     padding: 5px;
     float: left;
  }

@@ -88,4 +88,11 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
   ]);
 
 
+		 $("#down").click(function() {
+    $(".convertingstuff").text($("textarea").val());
+}).next().click(function () {
+    $("textarea").val($(".convertingstuff").text());
+});
+
+
 }());
