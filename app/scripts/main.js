@@ -18,7 +18,7 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
         
 		.config( function ($stateProvider, $urlRouterProvider) {
 
-		$urlRouterProvider.otherwise('/');
+		// $urlRouterProvider.otherwise('/');
 
 		      $stateProvider
 
@@ -38,11 +38,12 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
 
 		      })
 
-		      // .state('portal.gigs', {
-		      // 	url:'/gigs',
-		      // 	templateUrl: 'scripts/gigs/gigs.tpl.html',
-		      // 	controller: 'GigCtrl'
-		      // })
+		      .state('portal.single', {
+		      	url: '/single{{g.objectId}}',
+               templateUrl: 'scripts/gigs/single.gig.tpl.html',
+               controller: 'SingleCtrl'
+				})
+		      
 		      .state('portal.addgig', {
 		      	url:'/addgig',
 		      	templateUrl: 'scripts/gigs/add.gig.tpl.html'

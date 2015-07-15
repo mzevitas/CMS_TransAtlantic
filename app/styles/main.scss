@@ -9,8 +9,9 @@
  
  .container {
     clear: both;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
+
  }
  
  //Login Page Styles
@@ -75,22 +76,28 @@
 
 
 
+.portalmain{
+    margin-left: 38px;
+}
 .portal-left{
+        margin: 0 auto;
     h2{
         text-align: center;
         color: #65666b;
+
     }
 }
  .listGigs {
 
-    width: 320px;
+    width: 300px;
     height: 180px;
     text-align: center;
         color: #65666b;
 
     overflow: auto;
-    box-shadow: 1px 1px 1px 1px hsla(360,5%,8%,0.5);
+    box-shadow: 1px 1px 1px 2px hsla(360,5%,8%,0.3);
     margin-left: 18px;
+    margin-top: 8px;
     padding: 5px;
     float: left;
  }

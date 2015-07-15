@@ -3,7 +3,7 @@
 	'use strict';
 
     angular.module('app')
-        .factory('GigFactory', ['$http', '$state', 'PARSE', '$cookies',
+        .factory('GigFactory', ['$http', '$state', 'PARSE', '$cookies', 
             function($http, $state, PARSE, $cookies) {
 
 
@@ -22,9 +22,9 @@
                 });
         };
 
-                // var getSingle = function(rid) {
-                // 	return $http.get(PARSE.URL + 'classes/gigs/' + rid, PARSE.CONFIG)
-                // }
+                var getSingle = function(rid) {
+                	return $http.get(PARSE.URL + 'classes/gigs/' + rid, PARSE.CONFIG)
+                }
 
                 //  var editGig = function(rid) {
                 //  	return $http.put(PARSE.URL + 'classes/gigs/' + rid, PARSE.CONFIG);
@@ -39,8 +39,8 @@
                     get: getGig,
                     add: addGig,
                     // edit: editGig,
-                    del: deleteGigs
-                    // getSingle : getSingle 
+                    del: deleteGigs,
+                    getSingle : getSingle 
 
                 };
 
