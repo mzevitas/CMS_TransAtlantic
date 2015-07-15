@@ -39,7 +39,7 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
 		      })
 
 		      .state('portal.single', {
-		      	url: '/single{{g.objectId}}',
+		      	url: '/single/{id}',
                templateUrl: 'scripts/gigs/single.gig.tpl.html',
                controller: 'SingleCtrl'
 				})

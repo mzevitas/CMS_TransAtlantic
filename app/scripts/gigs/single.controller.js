@@ -6,7 +6,10 @@
 
     function ($scope, $http, GigFactory, $stateParams) {
 
-                GigFactory.getSingle($stateParams.rid).success(function (data) {
+
+
+
+                GigFactory.getSingle($stateParams.id).success(function (data) {
                     $scope.g = data;
 
                 });

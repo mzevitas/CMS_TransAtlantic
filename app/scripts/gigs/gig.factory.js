@@ -22,14 +22,15 @@
                 });
         };
 
-                var getSingle = function(rid) {
-                	return $http.get(PARSE.URL + 'classes/gigs/' + rid, PARSE.CONFIG)
-                }
+                var getSingle = function(id) {
+                	return $http.get(PARSE.URL + 'classes/gigs/' + id, PARSE.CONFIG)
+                };
 
-                //  var editGig = function(rid) {
-                //  	return $http.put(PARSE.URL + 'classes/gigs/' + rid, PARSE.CONFIG);
+                 var editGig = function(id) {
+                    var end = PARSE.URL + 'classes/gigs/' + id.objectId;
+                 	return $http.put(end, id, PARSE.CONFIG);
 
-                //  };
+                 };
 
                 var deleteGigs = function(id) {
                     return $http.delete(PARSE.URL + 'classes/gigs/' + id, PARSE.CONFIG);
@@ -38,7 +39,7 @@
                 return {
                     get: getGig,
                     add: addGig,
-                    // edit: editGig,
+                    edit: editGig,
                     del: deleteGigs,
                     getSingle : getSingle 
 

@@ -26,9 +26,12 @@
         });
       };
 
-      // $scope.editGig = function (id, index) {
-      //   GigFactory.edit(id).sucess( function())
-      // }
+//       $scope.editGig = function (id, index) {
+//         GigFactory.edit(id).sucess( function(){
+
+//           $state.go('portal');
+// }
+//           )};
 
       $scope.deleteMe = function (id, index) {
         GigFactory.del(id).success( function (response) {

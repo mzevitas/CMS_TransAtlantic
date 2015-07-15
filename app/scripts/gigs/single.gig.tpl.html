@@ -1,7 +1,91 @@
-<h4 style="margin: 0;">{{ g.venueName}}  <button class="del-btn" ng-click="deleteMe(g.objectId, $index)">X</button>
+<!-- <h4 style="margin: 0;">{{ g.venueName}}  <button class="del-btn" ng-click="deleteMe(g.objectId, $index)">X</button>
 </h4>
 		<hr>
 		<p style="margin: 4px;">{{ g.date}} at {{g.time}}</p>
 		<p style="margin: 4px;">{{ g.address}}  {{g.city}}, {{g.state}}, {{g.zip}}</p>
 		<p style="margin: 4px;">Load-in:{{ g.loadin}} || Sound Check:{{g.soundcheck}}</p>
-		<p style="margin: 4px;"><a href="{{g.website}}">{{g.venueName}}'s Website</a></p>
+		<p style="margin: 4px;"><a href="{{g.website}}">{{g.venueName}}'s Website</a></p> -->
+
+
+
+		 <form class="addform" ng-submit="editGig(g)" ng-controller="EditCtrl" >
+
+	<!-- Enter Venues Name -->
+    <md-input-container class="gigsAdd">
+        <label>Venue Name</label>
+        <input type="text" ng-model="g.venueName"/>
+      </md-input-container>
+
+
+<div layout layout-md="column">
+
+      <!-- Enter Venues Address -->
+      <md-input-container class="gigsAdd" flex>
+        <label>Venue Address</label>
+        <input type="text" ng-model="g.address"/>
+      </md-input-container>
+	<md-input-container class="gigsAdd" flex>
+        <label>Venue City</label>
+        <input type="text" ng-model="g.city"/>
+      </md-input-container>
+      <md-input-container class="gigsAdd" flex>
+        <label>Venue State</label>
+        <input type="text" ng-model="g.state"/>
+      </md-input-container>
+      <md-input-container class="gigsAdd" flex>
+        <label>Venue Zipcode</label>
+        <input type="text" ng-model="g.zip"/>
+      </md-input-container>
+</div>
+
+	<!-- Enters Website Address -->
+       <md-input-container class="gigsAdd">
+        <label>Website</label>
+        <input type="text" ng-model="g.website"/>
+      </md-input-container>
+
+
+
+<div layout layout-md="column">
+	<!-- Enter Date of Gig -->
+       <md-input-container class="gigsAdd" flex>
+        <label>Date</label>
+        <input type="text" ng-model="g.date"/>
+      </md-input-container>
+
+      <!-- Enter Time of Gig -->
+       <md-input-container class="gigsAdd" flex>
+        <label>Time of Gig (ie: 7pm-10pm)</label>
+        <input type="text" ng-model="g.time"/>
+      </md-input-container>
+
+      <!-- Enter Load in Time -->
+       <md-input-container class="gigsAdd" flex>
+        <label>Load-in Time</label>
+        <input type="text" ng-model="g.loadin"/>
+      </md-input-container>
+
+      <!-- Sound Check -->
+       <md-input-container class="gigsAdd" flex>
+        <label>Sound Check</label>
+        <input type="text" ng-model="g.soundcheck"/>
+      </md-input-container>
+</div>
+
+<div layout layout-md="column">
+		<md-input-container class="gigsAdd" flex>
+        <label>Gig Serial Number</label>
+        <input type="text" ng-model="g.serialnumber"/>
+      </md-input-container>
+
+</div>
+       
+
+       
+        <div class="buttonlog">
+ <md-button class="md-raised">Save Changes</md-button>
+
+ </div>
+ <md-button class="md-raised" ng-click="deleteMe(g.objectId, $index)" ng-controller="GigCtrl">Delete Gig</md-button>
+
+    </form>

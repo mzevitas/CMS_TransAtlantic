@@ -18,9 +18,8 @@
 <!-- <a ui-sref=".single"> -->
 
 <div class="listGigs" ng-repeat=" g in gigs | orderBy: 'serialnumber'"  id="{{ g.objectId }}">
-           <a ui-sref=".single/{{ g.objectId }}">
 
-		<h4 style="margin: 0;">{{ g.venueName}}  <button class="del-btn" ng-click="deleteMe(g.objectId, $index)">X</button>
+		<h4 style="margin: 0;">{{ g.venueName}}  
 </h4>
 		<hr>
 		<p style="margin: 4px;">{{ g.date}} at {{g.time}}</p>
@@ -28,8 +27,9 @@
 		<p style="margin: 4px;">Load-in:{{ g.loadin}} || Sound Check:{{g.soundcheck}}</p>
 		<p style="margin: 4px;"><a href="{{g.website}}">{{g.venueName}}'s Website</a></p>
 
+           <a ui-sref="portal.single({id: g.objectId})">
 
-
+<md-button class="md-raised">Edit Gig</md-button>
 
 	
 	</a>
