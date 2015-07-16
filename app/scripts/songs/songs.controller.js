@@ -8,7 +8,7 @@
 
        var cache = $cacheFactory.get('$http');
 
-      // $scope.gigs = [];
+
 
       SongsFactory.get().success( function (response) {
         $scope.songs = response.results;
@@ -19,19 +19,13 @@
         $scope.songs = {};
         SongsFactory.add(songObj).success( function (results) {
           songObj.objectId = results.objectId;
-          // $scope.events.push(eventObj);
+
           cache.remove(PARSE.URL + 'classes/songs');
           
 
         });
       };
 
-//       $scope.editGig = function (id, index) {
-//         GigFactory.edit(id).sucess( function(){
-
-//           $state.go('portal');
-// }
-//           )};
 
       $scope.deleteMe = function (id, index) {
         SongsFactory.del(id).success( function (response) {

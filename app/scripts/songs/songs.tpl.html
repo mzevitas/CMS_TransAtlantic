@@ -1,1 +1,36 @@
-songs
+<h2 class="venueh2">Master Song List</h2>
+
+<a ui-sref="portal" class="newvenue1"><md-button class="md-raised"><i class="fa fa-arrow-left"></i></md-button></a>
+
+<a ui-sref="portal.addSong" class="newvenue" ><md-button class="md-raised">Add Another Song</md-button></a>
+
+
+<br>
+<hr>
+<br>
+
+
+<div class="songlist" >
+	<table>
+	<tr class="headtr" >
+		<th>Song</th>
+		<th>Artist</th>
+		<th>Tempo</th>a
+		<th>Length</th>
+		<th>Key</th>
+		<th>Delete</th>
+
+	</tr>
+	<tr ng-controller="SongCtrl" ng-repeat="so in songs | orderBy :'-songtitle'">
+		<td>{{so.songtitle}}</td>
+		<td>{{ so.band }} </td>
+		<td>{{so.tempo }}</td>
+		<td>{{ so.length }}</td>
+		<td>{{ so.key }}</td>
+		<td><div ng-click="deleteMe(so.objectId, $index)" style="width: 15px; cursor: pointer; margin-left: 10px;"><i class="fa fa-trash-o"></i></div></td>
+
+	</tr>
+
+	</table>
+
+</div>

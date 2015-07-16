@@ -184,8 +184,20 @@ text-align: center;
     float: left;
     margin-top: 10px;
     vertical-align: center;
+}
 
+table{
+    margin: 0 auto;
+    tr, th, td{
+        border: 1px solid hsla(225,2%,67%,0.5);
+        padding: 10px;
+        text-align: center;
+    }
+}
 
+.headtr {
+    background-color: #65666b;
+    color: white;
 }
 
 

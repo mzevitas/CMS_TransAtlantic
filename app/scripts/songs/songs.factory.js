@@ -34,7 +34,7 @@
 
                 var deleteSong = function(id) {
                     return $http.delete(PARSE.URL + 'classes/songs/' + id, PARSE.CONFIG).success(function(){
-                        $state.go('portal');
+                        $state.go('portal.songList');
                     });
                 };
 

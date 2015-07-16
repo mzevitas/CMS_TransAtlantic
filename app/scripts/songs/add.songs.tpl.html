@@ -1,0 +1,34 @@
+<div class="addsong">
+    <h1>Add A New Song</h1>
+    <form class="addform" ng-submit="addSong(so)">
+
+	<!-- Enter Venues Name -->
+    <md-input-container class="songAdd">
+        <label>Song Name</label>
+        <input type="text" ng-model="so.songtitle"/>
+      </md-input-container>
+
+       <md-input-container class="songAdd">
+        <label>Band / Artist</label>
+        <input type="text" ng-model="so.band"/>
+      </md-input-container>
+<div layout layout-md="column">
+       <md-input-container class="songAdd" flex>
+        <label>Tempo</label>
+        <input type="text" ng-model="so.tempo"/>
+      </md-input-container>
+
+       <md-input-container class="songAdd" flex>
+        <label>Key of Song</label>
+        <input type="text" ng-model="so.key"/>
+      </md-input-container>
+
+       <md-input-container class="songAdd" flex>
+        <label>Length of Song</label>
+        <input type="text" ng-model="so.length"/>
+      </md-input-container>
+</div>
+
+      <md-button class="md-raised">Add Song</md-button>
+</form>
+</div>

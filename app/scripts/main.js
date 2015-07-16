@@ -79,7 +79,8 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
 		      
 		      .state('portal.addSong', {
 		      	url:'/addsong',
-		      	templateUrl: 'scripts/songs/add.songs.tpl.html'
+		      	templateUrl: 'scripts/songs/add.songs.tpl.html',
+		      	controller: 'SongCtrl'
 		      })
 //**********************************Venue Routes**********************************
 		      .state('portal.venueList', {
