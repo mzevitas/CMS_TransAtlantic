@@ -78,6 +78,21 @@
      }
  }
 
+ md-select {
+      display: block;
+  width: 150px;
+  float: right;
+  margin-top: -30px;
+  text-decoration: none;
+  font-size: 1.05em;
+  color: #65666b;
+    &:hover{
+            color: black;
+
+        }
+
+ }
+
 
 
 .portalmain{
@@ -98,7 +113,7 @@
 .listGigs {
 
     width: 310px;
-    height: 200px;
+    height: 240px;
     text-align: center;
         color: #65666b;
 
@@ -141,6 +156,37 @@
     float: left;
  }
 
+//venue Styles 
+
+.venueh2{
+text-align: center;
+        color: #65666b;
+        font-size: 2.5rem;
+        margin:0;    
+}
+.newvenue{
+    text-align: center;
+    color: #65666b;
+    font-size: 2.5rem;
+    margin:0;
+    float: right;
+      margin-top: -8px;
+
+
+}
+.venuelist {
+    width: 200px;
+    height: 80px;
+    box-shadow: 1px 1px 1px 2px hsla(360,5%,8%,0.3);
+    margin-left: 3%;
+    text-align: center;
+    padding: 10px;
+    float: left;
+    margin-top: 10px;
+    vertical-align: center;
+
+
+}
 
 
 footer{

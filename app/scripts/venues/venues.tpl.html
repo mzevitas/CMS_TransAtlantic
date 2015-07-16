@@ -1,0 +1,24 @@
+<h2 class="venueh2">Venue List</h2>
+
+<a ui-sref="portal" class="newvenue1"><md-button class="md-raised"><i class="fa fa-arrow-left"></i></md-button></a>
+
+<a ui-sref="portal.addvenue" class="newvenue" ><md-button class="md-raised">Add Another Venue</md-button></a>
+
+
+<br>
+<hr>
+<br>
+
+
+<div class="venuelist" ng-repeat="v in venues">
+	
+	<div>
+		{{ v.venue }}  <span ng-click="deleteMe(v.objectId, $index)" style="width: 15px; cursor: pointer; margin-left: 10px;"><i class="fa fa-trash-o"></i></span>
+	</div>
+
+</div>
+
+
+
+
+

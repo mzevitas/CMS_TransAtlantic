@@ -33,6 +33,7 @@
 	        <!-- <a ui-sref=".single"> -->
 	        <div class="listsets" ng-repeat=" s in sets | orderBy: 'songNum'" id="{{ s.objectId }}">
 	            <h4 style="margin: 0;">{{s.setTitle}}</h4>
+	            <hr>
 	            <p style="margin: 4px;">{{ s.setDate }} </p>
 	            <p style="margin: 4px;">{{ s.setLength }} </p>
 	            <textarea disabled rows="4" style="margin: 4px; text-align: center; border: 1px solid #d2d2d2;">{{ s.song }} </textarea>

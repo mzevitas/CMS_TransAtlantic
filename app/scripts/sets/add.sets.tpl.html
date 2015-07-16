@@ -3,9 +3,9 @@
     <form class="addformset" ng-submit="addSet(s)" ng-controller="SetCtrl" >
 
 	<!-- Enter Venues Name -->
-    <md-input-container class="setsAdd">
+    <md-input-container class="setsAdd" >
         <label>Set Title ie: Fado Set 1</label>
-        <input type="text" ng-model="s.setTitle"/>
+        <input type="text" ng-model="s.setTitle" required/>
       </md-input-container>
 
       <md-input-container class="setsAdd">

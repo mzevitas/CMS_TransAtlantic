@@ -18,10 +18,10 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
         
 		.config( function ($stateProvider, $urlRouterProvider) {
 
-		// $urlRouterProvider.otherwise('/');
+		$urlRouterProvider.otherwise('/');
 
 		      $stateProvider
-
+//**************************Main Routes**********************************
 		      .state( 'login', {
 		        url: '/',
 		        templateUrl: 'scripts/users/login.tpl.html',
@@ -37,7 +37,7 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
 		        templateUrl: 'views/portal.tpl.html'
 
 		      })
-
+//**************************Gig Routes**********************************
 		      .state('portal.single', {
 		      	url: '/single/{id}',
                templateUrl: 'scripts/gigs/single.gig.tpl.html',
@@ -48,7 +48,7 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
 		      	url:'/addgig',
 		      	templateUrl: 'scripts/gigs/add.gig.tpl.html'
 		      })
-
+//*************************Set Routes**********************************
 
 		      .state('portal.singleSet', {
 		      	url: '/singleSet/{id}',
@@ -66,9 +66,32 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
 		      	url:'/addset',
 		      	templateUrl: 'scripts/sets/add.sets.tpl.html'
 		      })
-
-		     
+//**************************Song Routes**********************************
+		      .state('portal.songList', {
+		      	url:'/songlist',
+		      	templateUrl: 'scripts/songs/songs.tpl.html',
+		      	controller: 'SongCtrl'
+		      })
+		      .state('portal.singleSong', {
+		      	url: '/singleSong/{id}',
+               templateUrl: 'scripts/songs/single.song.tpl.html'
+				})
 		      
+		      .state('portal.addSong', {
+		      	url:'/addsong',
+		      	templateUrl: 'scripts/songs/add.songs.tpl.html'
+		      })
+//**********************************Venue Routes**********************************
+		      .state('portal.venueList', {
+		      	url:'/venuelist',
+		      	templateUrl: 'scripts/venues/venues.tpl.html',
+		      	controller: 'VenueCtrl'
+		      })
+		      .state('portal.addvenue', {
+		      	url:'/addvenue',
+		      	templateUrl: 'scripts/venues/add.venue.tpl.html',
+		      	controller: 'VenueCtrl'
+		      })
 
 		    })
 
@@ -88,11 +111,7 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
   ]);
 
 
-		 $("#down").click(function() {
-    $(".convertingstuff").text($("textarea").val());
-}).next().click(function () {
-    $("textarea").val($(".convertingstuff").text());
-});
+
 
 
 }());

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css" />
     <!-- endbower -->
     <!-- endbuild -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
     <!-- build:css styles/main.css -->
@@ -21,11 +22,10 @@
 
 <!-- <div log-in> -->
 
-<div ui-view>
+<div ui-view >
     
 </div>
-    
-</div>
+
 
     
     <!-- build:js scripts/vendor.js -->
@@ -44,25 +44,38 @@
     <!-- endbuild -->
 
     
-
+        <!-- Main Js  -->
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
 
-        <!--Factories -->
+        <!--Users -->
         <script src="scripts/users/user.factory.js"></script>
-        <script src="scripts/gigs/gig.factory.js"></script>
-        <script src="scripts/sets/sets.factory.js"></script>
-        
-
-        <!--Controllers -->
-        <script src="scripts/gigs/gig.controller.js"></script>
         <script src="scripts/users/user.controller.js"></script>
-        <script src="scripts/gigs/single.controller.js"></script>
-        <script src="scripts/gigs/edit.gig.controller.js"></script>
+        
+        <!-- Setlist -->
+        <script src="scripts/sets/sets.factory.js"></script>
         <script src="scripts/sets/sets.controller.js"></script>
         <script src="scripts/sets/edit.sets.controller.js"></script>
         <script src="scripts/sets/single.sets.controller.js"></script>
+
+        <!-- Gigs -->
+        <script src="scripts/gigs/gig.factory.js"></script>
+        <script src="scripts/gigs/gig.controller.js"></script>
+        <script src="scripts/gigs/single.controller.js"></script>
+        <script src="scripts/gigs/edit.gig.controller.js"></script>
         
+        <!-- Venues -->
+        <script src="scripts/venues/venue.factory.js"></script>
+        <script src="scripts/venues/venue.controller.js"></script>
+     
+        <!-- Songs -->
+        <script src="scripts/songs/songs.factory.js"></script>
+        <script src="scripts/songs/songs.controller.js"></script>
+        <script src="scripts/songs/songs.edit.controller.js"></script>
+
+
+        
+
         
         
         
