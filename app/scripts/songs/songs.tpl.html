@@ -12,21 +12,23 @@
 
 <div class="songlist" >
 	<table>
-	<tr class="headtr" >
-		<th>Song</th>
-		<th>Artist</th>
-		<th>Tempo</th>a
-		<th>Length</th>
-		<th>Key</th>
+	<tr class="headtr">
+		<th><a href="" ng-click="reverse=!reverse;order('songtitle',reverse)">Song</a></th>
+		<th><a href="" ng-click="reverse=!reverse;order('band',reverse)">Artist</a></th>
+		<th><a href="" ng-click="reverse=!reverse;order('tempo',reverse)">Tempo</a></th>
+		<th><a href="" ng-click="reverse=!reverse;order('length',reverse)">Length</a></th>
+		<th><a href="" ng-click="reverse=!reverse;order('key',reverse)">Key</a></th>
+		<th>Edit</th>
 		<th>Delete</th>
 
 	</tr>
-	<tr ng-controller="SongCtrl" ng-repeat="so in songs | orderBy :'-songtitle'">
+	<tr ng-repeat="so in songs">
 		<td>{{so.songtitle}}</td>
 		<td>{{ so.band }} </td>
 		<td>{{so.tempo }}</td>
 		<td>{{ so.length }}</td>
 		<td>{{ so.key }}</td>
+		<td><a ui-sref="portal.singleSong" class="songedit"><i class="fa fa-pencil"></i></a></td>
 		<td><div ng-click="deleteMe(so.objectId, $index)" style="width: 15px; cursor: pointer; margin-left: 10px;"><i class="fa fa-trash-o"></i></div></td>
 
 	</tr>

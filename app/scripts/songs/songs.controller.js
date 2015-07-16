@@ -3,8 +3,8 @@
   'use strict';
 
   angular.module('app')
-    .controller('SongCtrl', ['$scope', '$http', '$state', 'PARSE', 'SongsFactory','$stateParams', '$cacheFactory',
-    function ($scope, $http, $state, PARSE, SongsFactory, $stateParams, $cacheFactory){
+    .controller('SongCtrl', ['$scope', '$http', '$state', 'PARSE', 'SongsFactory','$stateParams', '$cacheFactory', '$filter',
+    function ($scope, $http, $state, PARSE, SongsFactory, $stateParams, $cacheFactory, $filter){
 
        var cache = $cacheFactory.get('$http');
 
@@ -25,6 +25,15 @@
 
         });
       };
+
+
+      var orderBy = $filter('orderBy');
+      $scope.order = function(predicate, reverse) {
+        $scope.songs = orderBy($scope.songs, predicate, reverse);
+      };
+
+      $scope.order('-songtitle',false);
+
 
 
       $scope.deleteMe = function (id, index) {
