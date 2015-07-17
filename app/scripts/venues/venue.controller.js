@@ -8,7 +8,7 @@
 
        var cache = $cacheFactory.get('$http');
 
-      // $scope.gigs = [];
+
 
       VenueFactory.get().success( function (response) {
         $scope.venues = response.results;
@@ -19,7 +19,6 @@
         $scope.venues = {};
         VenueFactory.add(venueObj).success( function (results) {
           venueObj.objectId = results.objectId;
-          // $scope.events.push(eventObj);
           cache.remove(PARSE.URL + 'classes/venues');
           
 

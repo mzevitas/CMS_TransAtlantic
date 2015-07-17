@@ -22,16 +22,15 @@
                 });
         };
 
-                var getSingle = function(id) {
+                var getSingleVenue = function(id) {
                   return $http.get(PARSE.URL + 'classes/venues/' + id, PARSE.CONFIG)
                 };
 
                  var editVenue = function(id) {
                     var end = PARSE.URL + 'classes/venues/' + id.objectId;
-                  return $http.put(end, id, PARSE.CONFIG);
+                    return $http.put(end, id, PARSE.CONFIG);
 
                  };
-
                 var deleteVenues = function(id) {
                     return $http.delete(PARSE.URL + 'classes/venues/' + id, PARSE.CONFIG).success(function(){
                         $state.go('portal.venueList');
@@ -43,7 +42,7 @@
                     add: addVenue,
                     edit: editVenue,
                     del: deleteVenues,
-                    getSingle : getSingle 
+                    getSingle : getSingleVenue    
 
                 };
 

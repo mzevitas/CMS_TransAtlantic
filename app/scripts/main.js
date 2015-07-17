@@ -74,7 +74,8 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
 		      })
 		      .state('portal.singleSong', {
 		      	url: '/singleSong/{id}',
-               templateUrl: 'scripts/songs/single.song.tpl.html'
+               templateUrl: 'scripts/songs/single.song.tpl.html',
+               controller: 'EditSongCtrl'
 				})
 		      
 		      .state('portal.addSong', {
@@ -88,6 +89,12 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
 		      	templateUrl: 'scripts/venues/venues.tpl.html',
 		      	controller: 'VenueCtrl'
 		      })
+		      .state('portal.singleVenue', {
+		       url: '/singleVenue/{id}',
+               templateUrl: 'scripts/venues/single.venue.tpl.html',
+               controller: 'EditVenueCtrl'
+				})
+
 		      .state('portal.addvenue', {
 		      	url:'/addvenue',
 		      	templateUrl: 'scripts/venues/add.venue.tpl.html',
