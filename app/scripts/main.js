@@ -109,9 +109,9 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
 
 		    })
 
-		 .run([ '$rootScope', 'UserFactory', 'PARSE',
+		 .run([ '$rootScope', '$state', 'UserFactory', 'PARSE',
 
-			    function ($rootScope, UserFactory, PARSE) {
+			    function ($rootScope,  UserFactory, PARSE) {
 
 			      $rootScope.$on('$routeChangeStart', function () {
 			        
