@@ -37,7 +37,7 @@
      return {
        restrict: 'EA',
 
-       templateUrl: 'scripts/users/login.tpl.html' 
+       templateUrl: 'views/login.tpl.html' 
 
          };
 
