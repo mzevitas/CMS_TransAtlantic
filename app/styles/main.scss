@@ -1,199 +1,199 @@
+@import '../../bower_components/bourbon/dist/bourbon';
+@import '../../bower_components/neat/app/assets/stylesheets/neat';
 
- @import '../../bower_components/bourbon/dist/bourbon';
- @import '../../bower_components/neat/app/assets/stylesheets/neat';
-
-
- body {
-     font-family: 'Karla', sans-serif;
-     h1{
+// ***********************Global Styles *********************************
+body {
+    font-family: 'Karla', sans-serif;
+    margin: 0 auto;
+    h1 {
         color: #65666b;
-     }
- }
- 
- .container {
+    }
+}
+.container {
     clear: both;
     width: 95%;
     margin: 0 auto;
+}
 
- }
- .convertingstuff { white-space: pre; }
- 
- //Login Page Styles
- .loginpage {
-     padding-top: 15%;
-     margin: 0 auto;
-     h2 {
-         color: #65666b;
-         margin: 0;
-         text-align: center;
-         font-size: 2rem;
-     }
-     .inputlog {
-         width: 250px;
-         margin: 0 auto;
-     }
-     .buttonlog {
+// ***********************Global Buttons ********************************
+md-select {
+    display: block;
+    width: 386px;
+    height: 30px;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+    font-size: 1.05em;
+    color: #65666b;
+    &:hover {
+        color: black;
+    }
+}
+
+// ***********************Login Page Styles *******************************
+.loginpage {
+    padding-top: 15%;
+    margin: 0 auto;
+    h2 {
+        color: #65666b;
+        margin: 0;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .inputlog {
+        width: 250px;
+        margin: 0 auto;
+    }
+    .buttonlog {
         margin: 0 auto;
         text-align: center;
-     }
- }
+    }
+}
 
-//Header Styles
- header {
-     height: 60px;
-     padding-top: 10px;
-     background-color: #f6f6f6;
-     border-bottom: solid 1px #dfdfdf;
-     a{
+//*********************** Header Styles ****************************************
+header {
+    height: 60px;
+    padding-top: 10px;
+    background-color: #f6f6f6;
+    border-bottom: solid 1px #dfdfdf;
+    a {
         text-decoration: none;
         color: #65666b;
-
-        &:hover{
+        &:hover {
             color: black;
-
         }
-     }
-
-     .head-left {
-         float: left;
-         width: 30%;
-         h2 {
-             display: inline;
-             font-weight: 400;
-             font-size: 2rem;
-             margin-left: 7%;
-
-         }
-     }
-     .head-right {
-         float: right;
-         margin-right: 4%;
-         margin-top: 5px;
-
-
-         a{
+    }
+    .head-left {
+        float: left;
+        width: 30%;
+        h2 {
+            display: inline;
+            font-weight: 400;
+            font-size: 2rem;
+            margin-left: 7%;
+        }
+    }
+    .head-right {
+        float: right;
+        margin-right: 4%;
+        margin-top: 5px;
+        a {
             font-size: 1.5rem;
             padding-left: 15px;
-         }
-     }
- }
-
- md-select {
-      display: block;
-  width: 150px;
-  float: right;
-  margin-top: -30px;
-  text-decoration: none;
-  font-size: 1.05em;
-  color: #65666b;
-    &:hover{
-            color: black;
-
         }
-
- }
-
-
-
-.portalmain{
-    margin-left: 38px;
-   margin-bottom: 50px;
+    }
 }
-.portal-left{
-        margin: 0 auto;
-    h2{
+
+.topnavselect {
+    display: block;
+    width: 150px;
+    float: right;
+    margin-top: -30px;
+    text-decoration: none;
+    font-size: 1.05em;
+    color: #65666b;
+    &:hover {
+        color: black;
+    }
+}
+
+// *********************** Portal Page ****************************************
+.portalmain {
+    margin-bottom: 50px;
+    margin: 0 auto;
+}
+
+.portal-left {
+    margin: 0 auto;
+    h2 {
         text-align: center;
         color: #65666b;
         font-size: 2.5rem;
-        margin:0;
-
+        margin: 0;
     }
 }
 
 .listGigs {
-
     width: 310px;
     height: 240px;
     text-align: center;
-        color: #65666b;
-
+    color: #65666b;
     overflow: auto;
-    box-shadow: 1px 1px 1px 2px hsla(360,5%,8%,0.3);
-     margin-left: 5%;
-  margin-bottom: 29px;
-
+    box-shadow: 1px 1px 1px 2px hsla(360, 5%, 8%, 0.3);
+    margin-left: 6%;
+    margin-bottom: 29px;
     padding: 5px;
     float: left;
- }
+}
 
-
-.portal-sets{
-        margin: 0 auto;
-        clear: both;
-          // padding-top: 32px;
-
-    h2{
+.portal-sets {
+    margin: 0 auto;
+    clear: both;
+    h2 {
         text-align: center;
         color: #65666b;
         font-size: 2.5rem;
-        margin:0;
-
+        margin: 0;
     }
 }
 
 .listsets {
-
     width: 310px;
-    height: 230px;
+    height: 190px;
     text-align: center;
-        color: #65666b;
-
+    color: #65666b;
     overflow: auto;
-    box-shadow: 1px 1px 1px 2px hsla(360,5%,8%,0.3);
-    margin-left: 5%;
+    box-shadow: 1px 1px 1px 2px hsla(360, 5%, 8%, 0.3);
+    margin-left: 6%;
     margin-top: 29px;
     padding: 5px;
     float: left;
- }
-
-//venue Styles 
-
-.venueh2{
-text-align: center;
-        color: #65666b;
-        font-size: 2.5rem;
-        margin:0;    
 }
-.newvenue{
+
+// *********************** Venue Styles ****************************************
+.venueh2 {
     text-align: center;
     color: #65666b;
     font-size: 2.5rem;
-    margin:0;
-    float: right;
-      margin-top: -8px;
-
-
+    margin: 0;
 }
+
+.newvenue {
+    text-align: center;
+    color: #65666b;
+    font-size: 2.5rem;
+    margin: 0;
+    float: right;
+    margin-top: -8px;
+}
+
 .venuelist {
-    width: 200px;
-    height: 80px;
-    box-shadow: 1px 1px 1px 2px hsla(360,5%,8%,0.3);
+    width: 240px;
+    height: 100px;
+    overflow: auto;
+    box-shadow: 1px 1px 1px 2px hsla(360, 5%, 8%, 0.3);
     margin-left: 3%;
     text-align: center;
     padding: 10px;
     float: left;
     margin-top: 10px;
     vertical-align: center;
+    span {
+        margin-right: 5px;
+    }
 }
 
-table{
+table {
     margin: 0 auto;
-    tr, th, td{
-        border: 1px solid hsla(225,2%,67%,0.5);
+    tr,
+    th,
+    td {
+        border: 1px solid hsla(225, 2%, 67%, 0.5);
         padding: 10px;
         text-align: center;
     }
 }
+
 .headtr {
     background-color: #65666b;
     color: white;
@@ -208,25 +208,43 @@ table{
         }
     }
 }
+// *********************** Download page Styles *********************************
+#cmd {
+    // display: block;
+    float: right;
+      margin-top: -20px;
+
+    // text-align: center;
+    // margin: 0 auto;
+}
+.hr {
+    display: block;
+    height: 10px;
+    border: 0;
+    border-top: 1px solid white;
+    margin: 0;
+    padding: 0;
+}
+
+.singleformsetdownload {
+    font-size: 35px;
+}
+
+//*********************** ICON Styles ****************************************
 
 .fa {
     color: #65666b;
-
     &:hover {
-    color: black;
+        color: black;
     }
 }
-
-.fa-trash-o{
+.fa-trash-o {
     margin-left: 7px;
 }
 
+//*********************** Footer Styles ****************************************
 
-footer{
-    clear:both;
+footer {
+    clear: both;
     height: 100px;
 }
- 
-
-
-

@@ -101,6 +101,12 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
 		      	controller: 'VenueCtrl'
 		      })
 
+		      .state('portal.venueContact', {
+		      	url:'/addContactList',
+		      	templateUrl: 'scripts/venues/venue.contact.tpl.html',
+		      	controller: 'VenueCtrl'
+		      })
+
 		    })
 
 		 .run([ '$rootScope', 'UserFactory', 'PARSE',

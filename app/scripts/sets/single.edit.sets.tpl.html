@@ -1,16 +1,31 @@
-<h1>Edit {{s.setTitle}}</h1>
+<h1 style="text-align: center;">Editing {{s.setTitle}}</h1>
   <div id="singleformset">
 
+
     <form class="singleformset" ng-submit="editSet(s)" ng-controller="EditSetCtrl" >
+    <div class="btnedit" style="float: right;">
+<md-button class="md-raised">Save Set</md-button>
+
+ <md-button class="md-raised" ng-click="deleteMe(s.objectId, $index)" ng-controller="SetCtrl">Delete Set</md-button>
+
+<a ui-sref="portal.download({id: s.objectId})">
+<md-button class="md-raised">Download Set</md-button>
+</a></div>
+<br>
+<br>
+<br> 
+
 
 	<!-- Enter Venues Name -->
-    <md-input-container class="setsAdd">
+  <div layout layout-md="column">
+
+    <md-input-container class="setsAdd" flex>
         <label>Set Title ie: Fado 7/31 Set 1</label>
         <input type="text" ng-model="s.setTitle"/>
       </md-input-container>
 
 
-      <div layout layout-md="column">
+
       <md-input-container class="setsAdd" flex>
         <label>Set Date</label>
         <input type="text" ng-model="s.setDate"/>
@@ -21,32 +36,87 @@
       </md-input-container>
     </div>
 
-<div layout layout-md="column">
 
-      <!-- Enter Venues Address -->
-      <!-- <md-input-container class="setsAdd" small>
-        <label>Song Order #</label>
-        <input type="text" ng-model="s.songNum"/>
-      </md-input-container> -->
-	<md-input-container class="setsAdd" flex>
-        <label>Add Songs</label>
-        <!-- <input type="text" ng-model="s.song"/> -->
-        <textarea ng-model="s.song" style="text-align: center;"></textarea>
-      </md-input-container>
-</div>
 
-<md-button class="md-raised">Save Set</md-button>
+
+<!-- <div class="sont" ng-controller="SongCtrl"> -->
+
+      <md-select placeholder="Songs" ng-model="s.songsinset1" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" flex>{{so.songtitle}}</md-option>
+      </md-select>
+
+       <md-select placeholder="Songs" ng-model="s.songsinset2" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+
+       <md-select placeholder="Songs" ng-model="s.songsinset3" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+       <md-select placeholder="Songs" ng-model="s.songsinset4" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+       <md-select placeholder="Songs" ng-model="s.songsinset5" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+       <md-select placeholder="Songs" ng-model="s.songsinset6" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+       <md-select placeholder="Songs" ng-model="s.songsinset7" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+      <md-select placeholder="Songs" ng-model="s.songsinset8" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+      <md-select placeholder="Songs" ng-model="s.songsinset9" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+      <md-select placeholder="Songs" ng-model="s.songsinset10" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+      <md-select placeholder="Songs" ng-model="s.songsinset11" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+      <md-select placeholder="Songs" ng-model="s.songsinset12" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+      <md-select placeholder="Songs" ng-model="s.songsinset13" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+      <md-select placeholder="Songs" ng-model="s.songsinset14" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+      <md-select placeholder="Songs" ng-model="s.songsinset15" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+      <md-select placeholder="Songs" ng-model="s.songsinset16" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+      <md-select placeholder="Songs" ng-model="s.songsinset17" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+      <md-select placeholder="Songs" ng-model="s.songsinset18" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+      <md-select placeholder="Songs" ng-model="s.songsinset19" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+      <md-select placeholder="Songs" ng-model="s.songsinset20" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+      <md-select placeholder="Songs" ng-model="s.songsinset21" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+      <md-select placeholder="Songs" ng-model="s.songsinset22" ng-controller="SongCtrl">
+        <md-option ng-repeat="so in songs | orderBy:'songtitle'" >{{so.songtitle}}</md-option>
+      </md-select>
+
+<!-- </div> -->
+
 
 </form>
 </div>
-<md-button class="md-raised" ng-click="deleteMe(s.objectId, $index)" ng-controller="SetCtrl">Delete Set</md-button>
 
-<!-- 
 
-<a ui-sref="portal.download({id: s.objectId})">
-<md-button class="md-raised">Download Set</md-button>
-</a>
- -->
 
 
 

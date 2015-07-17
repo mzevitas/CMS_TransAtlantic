@@ -1,0 +1,36 @@
+<h2 class="venueh2">Venue Contacts</h2>
+
+<a ui-sref="portal.venueList" class="newvenue1"><md-button aria-label="song" class="md-raised"><i class="fa fa-arrow-left"></i></md-button></a>
+
+
+
+<br>
+<hr>
+<br>
+
+
+<div class="songlist" >
+	<table>
+	<tr class="headtr">
+		<th><a href="" ng-click="reverse=!reverse;order('venue',reverse)">Venue</a></th>
+		<th><a href="" ng-click="reverse=!reverse;order('venuecontact1',reverse)">Contact Name</a></th>
+		<th><a href="" ng-click="reverse=!reverse;order('venueemail',reverse)">Email</a></th>
+		<th><a href="" ng-click="reverse=!reverse;order('venuephone',reverse)">Phone</a></th>
+		<th>Edit</th>
+		<th>Delete</th>
+
+	</tr>
+	<tr ng-repeat="v in venues">
+		<td>{{v.venue}}</td>
+		<td>{{ v.venuecontact1 }} </td>
+		<td>{{v.venueemail}}</td>
+		<td>{{ v.venuephone }}</td>
+
+		<td><a ui-sref="portal.singleVenue({id: v.objectId })" class="songedit"><i class="fa fa-pencil"></i></a></td>
+		<td><div ng-click="deleteMe(v.objectId, $index)" style="width: 15px; cursor: pointer; margin-left: 10px;"><i class="fa fa-trash-o"></i></div></td>
+
+	</tr>
+
+	</table>
+
+</div>

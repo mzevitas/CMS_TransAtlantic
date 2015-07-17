@@ -16,10 +16,10 @@
     
 
       $scope.addSet = function (setObj) {
-        $scope.gigs = {};
+        // $scope.sets = [];
         SetsFactory.add(setObj).success( function (results) {
           setObj.objectId = results.objectId;
-          // $scope.events.push(eventObj);
+          // $scope.sets.push(setObj);
           cache.remove(PARSE.URL + 'classes/sets');
           
 

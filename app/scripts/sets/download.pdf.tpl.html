@@ -1,59 +1,57 @@
-<div id="content" class="singleformset" ng-controller="SetCtrl" style="text-align: center;">
-
-<h3>{{ s.setTitle }}</h3> 
-<p>{{ s.setDate }} </p>
-<p>{{ s.setLength }} </p>
-
-
+<a ui-sref="portal" class="newvenue1">
+    <md-button aria-label="song" class="md-raised"><i class="fa fa-arrow-left"></i></md-button></a>
+<a ui-sref="portal.singleSet({id: s.objectId})">
+    <md-button class="md-raised">Edit Set</md-button>
+</a>
+<div id="cmd">
     <br>
-<div class="convertingstuff"></div>
-
-<textarea  class="textremove" rows="22" style="margin: 4px; text-align: center; border: none;">{{ s.song }} </textarea>
+    <md-button class="md-raised">Download PDF</md-button>
 </div>
-
-
-
-<button id="down">↓</button>
-
-
-
-
-
-
-
-
-
-
-
-
+<div id="content" class="singleformsetdownload" ng-controller="SetCtrl" style="text-align: center;">
+    <h3 style="text-decoration: underline;">{{ s.setTitle }}</h3>
+    <hr class="hr"> {{s.songsinset1}}
+    <hr class="hr"> {{s.songsinset2}}
+    <hr class="hr"> {{s.songsinset3}}
+    <hr class="hr"> {{s.songsinset4}}
+    <hr class="hr"> {{s.songsinset5}}
+    <hr class="hr"> {{s.songsinset6}}
+    <hr class="hr"> {{s.songsinset7}}
+    <hr class="hr"> {{s.songsinset8}}
+    <hr class="hr"> {{s.songsinset9}}
+    <hr class="hr"> {{s.songsinset10}}
+    <hr class="hr"> {{s.songsinset11}}
+    <hr class="hr"> {{s.songsinset12}}
+    <hr class="hr"> {{s.songsinset13}}
+    <hr class="hr"> {{s.songsinset14}}
+    <hr class="hr"> {{s.songsinset15}}
+    <hr class="hr"> {{s.songsinset16}}
+    <hr class="hr"> {{s.songsinset17}}
+    <hr class="hr"> {{s.songsinset18}}
+    <hr class="hr"> {{s.songsinset19}}
+    <hr class="hr"> {{s.songsinset20}}
+    <hr class="hr"> {{s.songsinset21}}
+    <hr class="hr"> {{s.songsinset22}}
+    <hr class="hr"> {{s.songsinset23}}
+    <hr class="hr"> {{s.songsinset24}}
+    <hr class="hr"> {{s.songsinset25}}
+</div>
 <div id="editor"></div>
-<button id="cmd">generate PDF</button>
 
 
 
 <script>
-
-//  $("#down").click(function() {
-//     $(".convertingstuff").text($("textarea").val());
-// }).next().click(function () {
-//     $("textarea").val($(".convertingstuff").text());
-
-// });
-
-
-  
-  var doc = new jsPDF();
+var doc = new jsPDF();
 var specialElementHandlers = {
-    '#editor': function (element, renderer) {
+    '#editor': function(element, renderer) {
         return false;
     }
 };
 
-$('#cmd').click(function () {
+$('#cmd').click(function() {
     doc.fromHTML($('#content').get(0), 15, 15, {
         'width': 170,
         'elementHandlers': specialElementHandlers
     });
-    doc.save('setlist.pdf');
+    doc.save('Secret Sauce Set.pdf');
 });
 </script>

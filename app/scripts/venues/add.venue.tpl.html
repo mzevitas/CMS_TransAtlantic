@@ -3,11 +3,16 @@
     <form class="addform" ng-submit="addVenue(v)">
 
 	<!-- Enter Venues Name -->
-    <md-input-container class="venueAdd">
+  <div layout layout-md="column">
+    <md-input-container class="venueAdd" flex>
         <label>Venue Name</label>
         <input type="text" ng-model="v.venue"/>
       </md-input-container>
-
+      <md-input-container class="venueAdd" flex>
+        <label>Event Played ie: St Pattys</label>
+        <input type="text" ng-model="v.venueevent"/>
+      </md-input-container>
+</div>
       <div layout layout-md="column">
 
      <md-input-container class="venueAdd"flex>
