@@ -14,6 +14,8 @@
 	<table>
 	<tr class="headtr">
 		<th><a href="" ng-click="reverse=!reverse;order('songtitle',reverse)">Song</a></th>
+		<th><a href="" ng-click="reverse=!reverse;order('songtitle',reverse)">Song Notes</a></th>
+
 		<th><a href="" ng-click="reverse=!reverse;order('band',reverse)">Artist</a></th>
 		<th><a href="" ng-click="reverse=!reverse;order('whosings',reverse)">A / J</a></th>
 
@@ -26,6 +28,7 @@
 	</tr>
 	<tr ng-repeat="so in songs">
 		<td>{{so.songtitle}}</td>
+		<td>{{so.songnotes}}</td>
 		<td>{{ so.band }} </td>
 		<td>{{ so.whosings }} </td>
 		<td>{{so.tempo }}</td>

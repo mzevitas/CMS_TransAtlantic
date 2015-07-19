@@ -3,12 +3,19 @@
     <form class="addform" ng-submit="addSong(so)">
 
 	<!-- Enter Venues Name -->
-    <md-input-container class="songAdd">
+  <div layout layout-md="column">
+
+    <md-input-container class="songAdd" flex>
         <label>Song Name</label>
         <input type="text" ng-model="so.songtitle"/>
       </md-input-container>
 
+      <md-input-container class="songAdd" flex>
+        <label>Song Notes (2 clicks)</label>
+        <input type="text" ng-model="so.songnotes"/>
+      </md-input-container>
 
+</div>
 
 <div layout layout-md="column">
        <md-input-container class="songAdd" flex>

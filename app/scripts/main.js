@@ -111,12 +111,12 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
 
 		 .run([ '$rootScope', '$state', 'UserFactory', 'PARSE',
 
-			    function ($rootScope,  UserFactory, PARSE) {
+			    function ($rootScope, $state, UserFactory, PARSE) {
 
-			      $rootScope.$on('$routeChangeStart', function () {
+			      $rootScope.$on('$stateChangeStart', function () {
 			        
 			        // Run my Login Status
-			        UserFactory.status();
+			     // UserFactory.status();
 
 		 });
     
