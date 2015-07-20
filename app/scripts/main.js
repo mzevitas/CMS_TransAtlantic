@@ -83,6 +83,16 @@ angular.module('app', [ 'ui.router', 'ngCookies','UserModule', 'ngMaterial'])
 		      	templateUrl: 'views/add.songs.tpl.html',
 		      	controller: 'SongCtrl'
 		      })
+		      .state('portal.viewLyrics', {
+		      	url:'/lyrics/{id}',
+		      	templateUrl: 'views/view.lyrics.tpl.html',
+		      	controller: 'EditSongCtrl'
+		      })
+		      .state('portal.editLyrics', {
+		      	url:'/editlyrics/{id}',
+		      	templateUrl: 'views/add.lyrics.tpl.html',
+		      	controller: 'EditSongCtrl'
+		      })
 //**********************************Venue Routes**********************************
 		      .state('portal.venueList', {
 		      	url:'/venuelist',

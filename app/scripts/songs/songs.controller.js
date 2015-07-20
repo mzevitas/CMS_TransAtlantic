@@ -28,12 +28,14 @@
 
 
       var orderBy = $filter('orderBy');
-      $scope.order = function(predicate, reverse) {
-        $scope.songs = orderBy($scope.songs, predicate, reverse);
+      $scope.predicate = 'songtitle';
+      $scope.reverse = false;
+      $scope.order = function(predicate) {
+        $scope.reverse = ($scope.predicate === predicate) ? !$scope.reverse : false;
+        $scope.predicate = predicate;
       };
 
-      $scope.order('-songtitle',false);
-
+   
 
 
       $scope.deleteMe = function (id, index) {

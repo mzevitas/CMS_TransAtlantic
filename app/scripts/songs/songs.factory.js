@@ -29,8 +29,13 @@
                  var editSong = function(id) {
                     var end = PARSE.URL + 'classes/songs/' + id.objectId;
                     return $http.put(end, id, PARSE.CONFIG);
-
                  };
+                 var editLyric = function(id) {
+                    var end = PARSE.URL + 'classes/songs/' + id.objectId;
+                    return $http.put(end, id, PARSE.CONFIG);
+                 };
+                 
+
 
                 var deleteSong = function(id) {
                     return $http.delete(PARSE.URL + 'classes/songs/' + id, PARSE.CONFIG).success(function(){
@@ -42,6 +47,7 @@
                     get: getSong,
                     add: addSong,
                     edit: editSong,
+                    editl : editLyric,
                     del: deleteSong,
                     getSingle : getSingleSong 
 

@@ -1,0 +1,25 @@
+<h2 class="venueh2">{{so.songtitle}}</h2>
+
+<a ui-sref="portal.songList" class="newvenue1"><md-button aria-label="song" class="md-raised"><i class="fa fa-arrow-left"></i></md-button></a>
+
+<a ui-sref="portal.editLyrics({id: so.objectId })" class="newvenue" ><md-button aria-label="song" class="md-raised">Edit Lyrics</md-button></a>
+
+
+<br>
+<hr>
+<br>
+
+
+<div class="lyricsview">
+	
+<h3>Chords:</h3>
+<br>
+<textarea rows="5" cols="80" readonly>{{so.chords}}</textarea>
+<br>
+<h3>Lyrics:</h3>
+<br>
+<textarea rows="25" cols="80" readonly>{{so.lyrics}}</textarea>
+
+
+
+</div>

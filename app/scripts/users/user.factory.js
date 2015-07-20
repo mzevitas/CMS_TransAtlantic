@@ -46,7 +46,7 @@
           headers: PARSE.CONFIG.headers,
           params: userObj
         }).success (function (res) {
-          console.log(res);
+          // console.log(res);
 
           currentUser(res);
           $state.go('portal');

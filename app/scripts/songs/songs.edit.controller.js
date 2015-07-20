@@ -26,6 +26,15 @@ angular.module('app')
     });
 
   };
+  $scope.editLyric = function(song){
+
+   SongsFactory.editl(song).success( function(){
+
+      $state.go('portal.viewLyrics', {id});
+
+    });
+
+  };
 
 }])
 
