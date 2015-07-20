@@ -3,8 +3,8 @@
   'use strict';
 
   angular.module('app')
-    .controller('GigCtrl', ['$scope', '$http', '$state', 'PARSE', 'GigFactory','$stateParams', '$cacheFactory',
-    function ($scope, $http, $state, PARSE, GigFactory, $stateParams, $cacheFactory){
+    .controller('GigCtrl', ['$scope', '$http', '$state', 'PARSE', 'GigFactory','$stateParams', '$cacheFactory', '$window',
+    function ($scope, $http, $state, PARSE, GigFactory, $stateParams, $cacheFactory, $window){
 
        var cache = $cacheFactory.get('$http');
 
@@ -33,13 +33,21 @@
 // }
 //           )};
 
-      $scope.deleteMe = function (id, index) {
+      // $scope.deleteMe = function (id, index) {
+      //   GigFactory.del(id).success( function (response) {
+      //     $scope.gigs.splice(index, 1);
+      //     cache.remove(PARSE.URL + 'classes/gigs');
+      //   });
+      // };
+   $scope.deleteMe = function(id) {
+      var deleteVenue = $window.confirm('Are you sure you want to delete?');
+      if (deleteVenue) {
         GigFactory.del(id).success( function (response) {
-          $scope.gigs.splice(index, 1);
           cache.remove(PARSE.URL + 'classes/gigs');
+          // $state.reload();
         });
-      };
-
+    }
+  };
 
      
     
