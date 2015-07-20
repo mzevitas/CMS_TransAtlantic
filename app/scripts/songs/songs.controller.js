@@ -3,8 +3,8 @@
   'use strict';
 
   angular.module('app')
-    .controller('SongCtrl', ['$scope', '$http', '$state', 'PARSE', 'SongsFactory','$stateParams', '$cacheFactory', '$filter', '$window',
-    function ($scope, $http, $state, PARSE, SongsFactory, $stateParams, $cacheFactory, $filter, $window){
+    .controller('SongCtrl', ['$scope', '$http', '$state', 'PARSE', 'SongsFactory','$stateParams', '$cacheFactory', '$filter',
+    function ($scope, $http, $state, PARSE, SongsFactory, $stateParams, $cacheFactory, $filter){
 
        var cache = $cacheFactory.get('$http');
 
@@ -38,26 +38,12 @@
    
 
 
-      // $scope.deleteMe = function (id, index) {
-      //   SongsFactory.del(id).success( function (response) {
-      //     $scope.songs.splice(index, 1);
-      //     cache.remove(PARSE.URL + 'classes/songs');
-      //     $state.reload();
-      //   });
-      // };
-
-      $scope.deleteMe = function(id) {
-      var deleteSong = $window.confirm('Are you sure you want to delete?');
-
-      if (deleteSong) {
+      $scope.deleteMe = function (id, index) {
         SongsFactory.del(id).success( function (response) {
-          // $scope.songs.splice(index, 1);
+          $scope.songs.splice(index, 1);
           cache.remove(PARSE.URL + 'classes/songs');
-          $state.reload();
         });
-    }
-  };
-
+      };
 
 
      

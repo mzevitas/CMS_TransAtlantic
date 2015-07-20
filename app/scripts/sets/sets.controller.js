@@ -3,8 +3,8 @@
   'use strict';
 
   angular.module('app')
-    .controller('SetCtrl', ['$scope', '$http', '$state', 'PARSE', 'SetsFactory','$stateParams', '$cacheFactory', '$window',
-    function ($scope, $http, $state, PARSE, SetsFactory, $stateParams, $cacheFactory, $window){
+    .controller('SetCtrl', ['$scope', '$http', '$state', 'PARSE', 'SetsFactory','$stateParams', '$cacheFactory',
+    function ($scope, $http, $state, PARSE, SetsFactory, $stateParams, $cacheFactory){
 
        var cache = $cacheFactory.get('$http');
 
@@ -33,21 +33,13 @@
 // }
 //           )};
 
-      // $scope.deleteMe = function (id, index) {
-      //   SetsFactory.del(id).success( function (response) {
-      //     $scope.sets.splice(index, 1);
-      //     cache.remove(PARSE.URL + 'classes/sets');
-      //   });
-      // };
- $scope.deleteMe = function(id) {
-      var deleteVenue = $window.confirm('Are you sure you want to delete?');
-      if (deleteVenue) {
+      $scope.deleteMe = function (id, index) {
         SetsFactory.del(id).success( function (response) {
+          $scope.sets.splice(index, 1);
           cache.remove(PARSE.URL + 'classes/sets');
-
         });
-    }
-  };
+      };
+
 
      
     
