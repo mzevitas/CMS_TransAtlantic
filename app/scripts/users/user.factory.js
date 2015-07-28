@@ -24,8 +24,6 @@
 
       };
 
-
-
       // Add a new User
       var addUser = function (userObj) {
         $http.post(PARSE.URL + 'users', userObj, PARSE.CONFIG)

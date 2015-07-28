@@ -2,7 +2,7 @@
   
   'use strict';
 
-  angular.module('UserModule', ['ngCookies'])
+  angular.module('UserModule')
 
   .controller('UserCtrl', ['$scope', '$state', 'UserFactory',
 
