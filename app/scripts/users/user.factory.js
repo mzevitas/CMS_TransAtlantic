@@ -2,7 +2,7 @@
   
   'use strict';
 
-  angular.module('UserModule', [])
+  angular.module('app', ['ngCookies'])
 
   .factory('UserFactory', ['$http', 'PARSE', '$cookies', '$state',
 

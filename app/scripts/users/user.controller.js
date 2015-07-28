@@ -2,11 +2,11 @@
   
   'use strict';
 
-  angular.module('UserModule')
+  angular.module('app', ['ngCookies'])
 
-  .controller('UserCtrl', ['$scope', 'UserFactory', '$state', 
+  .controller('UserCtrl', ['$scope', 'UserFactory', '$cookies', '$state', 
 
-    function ($scope, UserFactory, $state) {
+    function ($scope, UserFactory, $cookies, $state) {
 
      
       // Add a new user
