@@ -3,7 +3,7 @@
     'use strict';
 
 
-angular.module('app', [ 'ngCookies', 'ui.router', 'ngMaterial'])
+angular.module('app', [ 'UserModule', 'ui.router',  'ngMaterial', 'ngCookies'])
     .constant('PARSE', {
         URL: 'https://api.parse.com/1/',
         CONFIG: {
