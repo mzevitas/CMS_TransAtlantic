@@ -234,15 +234,16 @@ table {
 .lyricsview {
     margin: 0 auto;
     textarea {
-            outline: none !important;
+        outline: none !important;
         text-align: center;
-        border-radius: 7px;
+        border-radius: 3px;
         display: block;
         margin: 0 auto;
         overflow: auto;
-        box-shadow: 1px 1px 1px 2px hsla(360, 5%, 8%, 0.3);
-        border: 1px solid hsla(360, 5%, 8%, 0.3);
+        // box-shadow: 0.1px 0.1px 0.1px .12px hsla(360, 5%, 8%, 0.3);
+        border: 0px solid hsla(360, 5%, 8%, 0.3);
         padding: 5px;
+        resize: none;
     }
     h3 {
         text-align: center;

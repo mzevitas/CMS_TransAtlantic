@@ -30,7 +30,7 @@ angular.module('app')
 
    SongsFactory.editl(song).success( function(){
 
-      $state.go('portal.viewLyrics', {id});
+      $state.go('portal.viewLyrics', {id: song.objectId});
 
     });
 
