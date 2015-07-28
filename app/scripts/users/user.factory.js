@@ -7,7 +7,19 @@
   .factory('UserFactory', ['$http', 'PARSE', '$cookies', '$state',
 
     function ($http, PARSE, $cookies, $state) {
-    
+
+
+    var _routeUser = function (st) {
+          if(st === undefined) {
+            // route to Login Page
+            $state.go('login');
+          } else if($state.go() === 'login') {
+            // route to Home Page
+            $state.go('portal');
+          }
+        };
+
+
       // Get Current User
       var currentUser = function (data) {
          $cookies.put('sessionToken', data.sessionToken);
@@ -15,13 +27,18 @@
       };
 
       // Check User Status
-      var checkLoginStatus = function () {
-        var user = currentUser();
-        if (data) {
-          PARSE.CONFIG.headers['X-PARSE-Session-Token'] = data.sessionToken;
+      var checkLoginStatus = function (st) {
+        // var user = currentUser();
+        if (st !== undefined) {
+          PARSE.CONFIG.headers['X-PARSE-Session-Token'] = st;
 
         }
 
+      };
+
+      var checkuser = function(data) {
+        var st = $cookies.get('sessionToken');
+        checkLoginStatus(st);
       };
 
       // Add a new User
@@ -66,7 +83,8 @@
         login : loginUser,
         user : currentUser,
         status : checkLoginStatus,
-        logout : logoutUser
+        logout : logoutUser,
+        checkuser : checkuser
       };
 
     }

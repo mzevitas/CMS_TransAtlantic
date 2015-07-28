@@ -126,7 +126,8 @@ angular.module('app', [ 'UserModule', 'ui.router',  'ngMaterial', 'ngCookies'])
 			      $rootScope.$on('$stateChangeStart', function () {
 			        
 			        // Run my Login Status
-			     // UserFactory.status();
+			     UserFactory.checkuser();
+			     console.log(UserFactory.checkuser);
 
 		 });
     
