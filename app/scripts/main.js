@@ -3,20 +3,32 @@
     'use strict';
 
 
-angular.module('app', [ 'UserModule', 'ui.router',  'ngMaterial', 'ngCookies'])
-    .constant('PARSE', {
+ var app = angular.module('app', [ 'UserModule', 'ui.router',  'ngMaterial', 'ngCookies', 'spotify']);
+
+    app.constant('PARSE', {
         URL: 'https://api.parse.com/1/',
         CONFIG: {
             headers: {
-                'X-Parse-Application-Id': 'RBIg848SejjBwRjJgCFobwJesEan2nd2TzCU6oSq',
-                'X-Parse-REST-API-Key': 'MdMDZR1bD02sD8UPu97Hxk9MrGT0NJoMvwiyrbk0',
+                'X-Parse-Application-Id': app_key,
+                'X-Parse-REST-API-Key': rest_parse,
                 'Content-Type': 'application/json'
             }
 
         }
-    })
+    });
+
+
+    app.config(function (SpotifyProvider) {
+  			SpotifyProvider.setClientId('<CLIENT_ID>');
+  			SpotifyProvider.setRedirectUri('<CALLBACK_URI>');
+  			SpotifyProvider.setScope('<SCOPE>');
+ 			 // If you already have an auth token
+  			SpotifyProvider.setAuthToken('<AUTH_TOKEN>');
+		});
+
+
         
-		.config( function ($stateProvider, $urlRouterProvider) {
+		app.config( function ($stateProvider, $urlRouterProvider) {
 
 		$urlRouterProvider.otherwise('/');
 

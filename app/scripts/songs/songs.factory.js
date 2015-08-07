@@ -3,7 +3,7 @@
     'use strict';
 
     angular.module('app')
-        .factory('SongsFactory', ['$http', '$state', 'PARSE', '$cookies', 
+        .factory('SongsFactory', ['$http', '$state', 'PARSE', '$cookies',
             function($http, $state, PARSE, $cookies) {
 
 

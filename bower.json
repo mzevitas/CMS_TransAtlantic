@@ -12,6 +12,8 @@
     "angular-material": "~0.10.0",
     "angular-cookies": "~1.4.2",
     "angular-route": "~1.4.2",
-    "jspdf": "1.0.272 "
+    "jspdf": "1.0.272 ",
+    "ng-sweet-alert": "~1.0.4",
+    "angular-spotify": "~1.0.0"
   }
 }

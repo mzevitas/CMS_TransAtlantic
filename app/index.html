@@ -9,6 +9,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
     <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="../bower_components/sweetalert/dist/sweetalert.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -40,21 +41,29 @@
     <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="../bower_components/angular-route/angular-route.js"></script>
     <script src="../bower_components/jspdf/dist/jspdf.min.js"></script>
+    <script src="../bower_components/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../bower_components/ng-sweet-alert/ng-sweet-alert.js"></script>
+    <script src="../bower_components/angular-spotify/dist/angular-spotify.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     
         <!-- main Js  -->
         <!-- build:js scripts/main.js -->
-        
-        <script src="scripts/main.js"></script>
 
+        <!-- All Keys and Tokens -->
+        <script src="tokens/parse_keys.js"></script>
+        <script src="tokens/spotify_keys.js"></script>
+        
+        <!-- Main JS -->
+        <script src="scripts/main.js"></script>
+        
+        <!-- Factories and Controllers  -->
         <script src="scripts/users/user.factory.js"></script>
         <script src="scripts/sets/sets.factory.js"></script>
         <script src="scripts/gigs/gig.factory.js"></script>
         <script src="scripts/venues/venue.factory.js"></script>
         <script src="scripts/songs/songs.factory.js"></script>
-        
         <script src="scripts/users/user.controller.js"></script>
         <script src="scripts/sets/sets.controller.js"></script>
         <script src="scripts/sets/edit.sets.controller.js"></script>
