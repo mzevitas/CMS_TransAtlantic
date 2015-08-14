@@ -111,9 +111,15 @@
 		      	templateUrl: 'views/venues.tpl.html',
 		      	controller: 'VenueCtrl'
 		      })
+
 		      .state('portal.singleVenue', {
 		       url: '/singleVenue/{id}',
                templateUrl: 'views/single.venue.tpl.html',
+               controller: 'EditVenueCtrl'
+				})
+		      .state('portal.singleContact', {
+		       url: '/singleContact/{id}',
+               templateUrl: 'views/singleContact.tpl.html',
                controller: 'EditVenueCtrl'
 				})
 

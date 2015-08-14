@@ -1,0 +1,46 @@
+<h2 class="venueh2"> {{v.venue}}'s Contacts</h2>
+
+<a ui-sref="portal.venueList" class="newvenue1"><md-button aria-label="song" class="md-raised"><i class="fa fa-arrow-left"></i></md-button></a>
+
+<a ui-sref="portal.singleVenue({id: v.objectId })"> <md-button aria-label="song" class="md-raised"> Edit {{v.venue}}</md-button></a>
+
+
+
+<br>
+<hr>
+<br>
+
+
+
+<div class="ContactCard">
+	<div class="contactvenuename">{{v.venue}}</div>
+
+		<div class="contactaddress">
+			<h3>{{v.venueaddress}}</h3>
+			<h3>{{v.venuecity}}</h3>
+			<h3>{{v.venuestate}}</h3>
+			<h3>{{v.venuezip}}</h3>
+
+		</div>
+
+	{{ v.venuecontact1 }} 
+	<br>
+	{{v.venueemail}}
+	<br>
+	{{ v.venuephone }}
+	<br>
+	{{v.venueevent}}
+	<br>
+	
+
+
+
+	{{v.venuecontact2}}	<br>
+
+	{{v.venueemail2}}	<br>
+
+	{{v.venuephone2}}	<br>
+
+</div>
+
+
