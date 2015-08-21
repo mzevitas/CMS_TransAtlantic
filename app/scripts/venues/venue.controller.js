@@ -26,13 +26,13 @@
       };
 
 
-       var orderBy = $filter('orderBy');
-      $scope.order = function(predicate, reverse) {
-        $scope.venues = orderBy($scope.venues, predicate, reverse);
+     var orderBy = $filter('orderBy');
+      $scope.predicate = 'venue';
+      $scope.reverse = false;
+      $scope.order = function(predicate) {
+        $scope.reverse = ($scope.predicate === predicate) ? !$scope.reverse : false;
+        $scope.predicate = predicate;
       };
-
-      $scope.order('-venue',false);
-
 
 
       $scope.deleteMe = function(id) {

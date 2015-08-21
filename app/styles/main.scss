@@ -1,7 +1,7 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
-// ***********************Global Styles *********************************
+// ***********************Global Styles ****************************
 body {
     font-family: 'Karla', sans-serif;
     margin: 0 auto;
@@ -9,13 +9,28 @@ body {
         color: #65666b;
     }
 }
+
+body:before {
+          content: "";
+          position: fixed;
+          top: -10px;
+          left: 0;
+          width: 100%;
+          height: 10px;
+
+          -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+          -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+          box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+
+          z-index: 100;
+}
 .container {
     clear: both;
     width: 95%;
     margin: 0 auto;
 }
 
-// ***********************Global Buttons ********************************
+// ***********************Global Buttons ************************
 md-select {
     display: block;
     width: 386px;
@@ -30,7 +45,7 @@ md-select {
     }
 }
 
-// ***********************Login Page Styles *******************************
+// ***********************Login Page Styles *************************
 .loginpage {
     padding-top: 15%;
     margin: 0 auto;
@@ -50,7 +65,7 @@ md-select {
     }
 }
 
-//*********************** Header Styles ****************************************
+//*********************** Header Styles **************************
 header {
     height: 60px;
     padding-top: 10px;
@@ -97,7 +112,7 @@ header {
     }
 }
 
-// *********************** Portal Page ****************************************
+// *********************** Portal Page ****************************
 .portalmain {
     margin-bottom: 50px;
     margin: 0 auto;
@@ -150,7 +165,7 @@ header {
     float: left;
 }
 
-// *********************** Venue Styles ****************************************
+// *********************** Venue Styles ***********************
 .venueh2 {
     text-align: center;
     color: #65666b;
@@ -208,7 +223,43 @@ table {
         }
     }
 }
-// *********************** Download page Styles *********************************
+
+.tr-each {
+    .namehover {
+        text-decoration: none;
+        color: #65666b;
+        transition: ease 0.4s;
+
+
+
+        &:hover{
+            color: black;
+            margin-left: 5px;
+            transition: ease 0.6s;
+
+
+        }
+    }
+}
+
+.tr-each {
+    .emailhover {
+        text-decoration: none;
+        color: #65666b;
+
+
+
+
+        &:hover{
+            color: black;
+         
+
+
+        }
+    }
+}
+
+// *********************** Download page Styles ********************
 #cmd {
     // display: block;
     float: right;
@@ -216,8 +267,7 @@ table {
 
     // text-align: center;
     // margin: 0 auto;
-}
-.hr {
+} .hr {
     display: block;
     height: 10px;
     border: 0;
@@ -254,7 +304,7 @@ table {
 }
 
 
-//*********************** ICON Styles ****************************************
+//*********************** ICON Styles *****************************
 
 .fa {
     color: #65666b;
@@ -266,7 +316,7 @@ table {
     margin-left: 7px;
 }
 
-//*********************** Footer Styles ****************************************
+//*********************** Footer Styles ********************************
 
 footer {
     clear: both;

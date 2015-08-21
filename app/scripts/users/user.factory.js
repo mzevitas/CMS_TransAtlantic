@@ -31,14 +31,15 @@
         // var user = currentUser();
         if (st !== undefined) {
           PARSE.CONFIG.headers['X-PARSE-Session-Token'] = st;
-
         }
 
       };
 
       var checkuser = function(data) {
         var st = $cookies.get('sessionToken');
+
         checkLoginStatus(st);
+
       };
 
       // Add a new User

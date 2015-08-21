@@ -105,6 +105,13 @@
 		      	templateUrl: 'views/add.lyrics.tpl.html',
 		      	controller: 'EditSongCtrl'
 		      })
+
+//**********************************Image and bio Routes**********************************
+		      .state('portal.images', {
+		      	url:'/images',
+		      	templateUrl: 'views/images.tpl.html',
+		      	controller: ''
+		      })
 //**********************************Venue Routes**********************************
 		      .state('portal.venueList', {
 		      	url:'/venuelist',

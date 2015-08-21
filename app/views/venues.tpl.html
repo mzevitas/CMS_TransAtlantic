@@ -16,18 +16,18 @@
 <div class="songlist" >
 	<table>
 	<tr class="headtr">
-		<th><a href="" ng-click="reverse=!reverse;order('venue',reverse)">Venue</a></th>
-		<th><a href="" ng-click="reverse=!reverse;order('venuecontact1',reverse)">Contact Name</a></th>
-		<th><a href="" ng-click="reverse=!reverse;order('venueemail',reverse)">Email</a></th>
-		<th><a href="" ng-click="reverse=!reverse;order('venuephone',reverse)">Phone</a></th>
+		<th><a href="" ng-click="order('venue')">Venue</a></th>
+		<th><a href="" ng-click="order('venuecontact1')">Contact Name</a></th>
+		<th><a href="" ng-click="order('venueemail')">Email</a></th>
+		<th><a href="" ng-click="order('venuephone')">Phone</a></th>
 		<th>Edit</th>
 		<th>Delete</th>
 
 	</tr>
-	<tr ng-repeat="v in venues">
-		<td><a ui-sref="portal.singleContact({id: v.objectId })">{{v.venue}}<a></td>
+	<tr ng-repeat="v in venues | orderBy:predicate:reverse" class="tr-each">
+		<td><a ui-sref="portal.singleContact({id: v.objectId })" class="namehover">{{v.venue}}<a></td>
 		<td>{{ v.venuecontact1 }} </td>
-		<td>{{v.venueemail}}</td>
+		<td><a href="mailto:{{v.venueemail}}" class="emailhover">{{v.venueemail}}</a></td>
 		<td>{{ v.venuephone }}</td>
 
 		<td><a ui-sref="portal.singleVenue({id: v.objectId })" class="songedit"><i class="fa fa-pencil"></i></a></td>
