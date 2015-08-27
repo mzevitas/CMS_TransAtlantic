@@ -9,19 +9,23 @@
 
 	<div class="head-right">
 		<span><a ui-sref="portal">Home</a></span>
-		<span><a ui-sref=".addgig">Add Gig</a></span>
-		<span><a ui-sref=".addset">Add Set</a></span>
-		<!-- <span><a href="#/" log-out>Log Out</a></span> -->
+		<span><a ui-sref="portal.songList">Songs</a></span>
+		<span><a ui-sref="portal.venueList">Venues</a></span>
+		<span><a ui-sref="portal.gigList">Gigs</a></span>
+		<span><a ui-sref="portal.sets">Sets</a></span>
 
-		<span><a><md-select class="topnavselect" ng-model="s.web" placeholder="Tools">
-        <md-option ui-sref="portal.songList">Song List</md-option>
-        <md-option ui-sref="portal.venueList">Venue List</md-option>
-        <md-option ui-sref="portal.images">Add Images</md-option>
 
-        <!-- <md-option ui-sref=".addgig">Add gig</md-option> -->
-        <md-option ui-sref="login" log-out>Log Out</md-option>
+	
 
+      <span><a><md-select class="topnavselect" ng-model="s.web" placeholder="Web CMS">
+        <md-option ui-sref="portal.about">Band</md-option>
+        <md-option ui-sref="portal.addset">Media</md-option>
+
+     
       </md-select></a></span>
+
+
+
       
 	</div>
 </header><!-- /header -->

@@ -96,21 +96,23 @@ header {
             font-size: 1.5rem;
             padding-left: 15px;
         }
-    }
-}
 
-.topnavselect {
-    display: block;
+        .topnavselect {
+       display: block;
     width: 150px;
     float: right;
-    margin-top: -30px;
+    margin-top: -27px;
     text-decoration: none;
-    font-size: 1.05em;
+    font-size: 0.9em;
     color: #65666b;
     &:hover {
         color: black;
     }
 }
+    }
+}
+
+
 
 // *********************** Portal Page ****************************
 .portalmain {

@@ -3,7 +3,7 @@
     'use strict';
 
 
- var app = angular.module('app', [ 'UserModule', 'ui.router',  'ngMaterial', 'ngCookies', 'spotify']);
+ var app = angular.module('app', [ 'UserModule', 'ui.router',  'ngMaterial', 'ngCookies']);
 
     app.constant('PARSE', {
         URL: 'https://api.parse.com/1/',
@@ -16,16 +16,6 @@
 
         }
     });
-
-
-    app.config(function (SpotifyProvider) {
-  			SpotifyProvider.setClientId('<CLIENT_ID>');
-  			SpotifyProvider.setRedirectUri('<CALLBACK_URI>');
-  			SpotifyProvider.setScope('<SCOPE>');
- 			 // If you already have an auth token
-  			SpotifyProvider.setAuthToken('<AUTH_TOKEN>');
-		});
-
 
         
 		app.config( function ($stateProvider, $urlRouterProvider) {
@@ -50,6 +40,11 @@
 
 		      })
 //**************************Gig Routes**********************************
+		      .state('portal.gigList', {
+		      	url:'/gigList',
+		      	templateUrl: 'views/gigs.tpl.html',
+		      	controller: 'GigCtrl'
+		      })
 		      .state('portal.single', {
 		      	url: '/single/{id}',
                templateUrl: 'views/single.gig.tpl.html',
@@ -61,7 +56,11 @@
 		      	templateUrl: 'views/add.gig.tpl.html'
 		      })
 //*************************Set Routes**********************************
-
+				.state('portal.sets', {
+		      	url:'/sets',
+		      	templateUrl: 'views/sets.tpl.html',
+		      	controller: 'SetCtrl'
+		      })
 		      .state('portal.singleSet', {
 		      	url: '/singleSet/{id}',
                templateUrl: 'views/single.edit.sets.tpl.html',
@@ -106,10 +105,29 @@
 		      	controller: 'EditSongCtrl'
 		      })
 
-//**********************************Image and bio Routes**********************************
+//**********************************Image/Video Routes**********************************
 		      .state('portal.images', {
 		      	url:'/images',
 		      	templateUrl: 'views/images.tpl.html',
+		      	controller: ''
+		      })
+
+//********************************* About Routes**********************************
+		      .state('portal.about', {
+		      	url:'/about',
+		      	templateUrl: 'views/about.tpl.html',
+		      	controller: ''
+		      })
+		      .state('portal.editabout', {
+		      	url:'/editabout/{id}',
+		      	templateUrl: 'views/edit.about.tpl.html',
+		      	controller: ''
+		      })
+
+//**********************************Mailing List Routed Routes**********************************
+		      .state('portal.mailing', {
+		      	url:'/mailing',
+		      	templateUrl: 'views/mailing.tpl.html',
 		      	controller: ''
 		      })
 //**********************************Venue Routes**********************************
