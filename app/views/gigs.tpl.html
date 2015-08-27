@@ -1,15 +1,33 @@
-<div class="gigspage">
- 
+<h2 class="venueh2">Gigs List</h2>
 
- 	<div class="listGigs" ng-repeat="g in gigs">
-		<h4>{{ g.venueName}}</h4>
+<a ui-sref="portal" class="newvenue1"><md-button aria-label="song" class="md-raised"><i class="fa fa-arrow-left"></i></md-button></a>
 
+<a ui-sref="portal.addgig" class="newvenue" ><md-button aria-label="song" class="md-raised">Add A Gig</md-button></a>
+
+
+<br>
+<hr>
+<br>
+
+
+
+
+<div class="gigspage" ng-controller="GigCtrl">
+	    
+	    <div class="portalmain">
+	        <!-- <a ui-sref=".single"> -->
+	        <div class="listGigs" ng-repeat=" g in gigs | orderBy: 'serialnumber'" id="{{ g.objectId }}">
+	            <h4 style="margin: 0;">{{ g.venueName}}</h4>
+	            <hr>
+	            <p style="margin: 4px;"><b>{{ g.day}}</b></p>
+	            <p style="margin: 4px;">{{ g.date}} at {{g.time}}</p>
+	            <p style="margin: 4px;">{{ g.address}} {{g.city}}, {{g.state}}, {{g.zip}}</p>
+	            <p style="margin: 4px;">Load-in: {{ g.loadin}} || Sound Check: {{g.soundcheck}}</p>
+	            <p style="margin: 4px;"><a href="{{g.website}}">{{g.venueName}}'s Website</a></p>
+	            <a ui-sref="portal.single({id: g.objectId})">
+	                <md-button class="md-raised">Edit Gig</md-button>
+	            </a>
+	        </div>
+	    </div>
 	</div>
-
-	<a ui-sref=".addgig">Add A Gig</a>
-
-	<div class="smallcontainer"ui-view>
-		
-
-	</div>
-</div>
+	

@@ -21,7 +21,7 @@ angular.module('app')
 
    GigFactory.edit(gig).success( function(){
 
-      $state.go('portal');
+      $state.go('portal.gigList');
 
     });
 

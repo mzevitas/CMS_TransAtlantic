@@ -3,8 +3,8 @@
   'use strict';
 
   angular.module('app')
-    .controller('SetCtrl', ['$scope', '$http', '$state', 'PARSE', 'SetsFactory','$stateParams', '$cacheFactory', '$window',
-    function ($scope, $http, $state, PARSE, SetsFactory, $stateParams, $cacheFactory, $window){
+    .controller('SetCtrl', ['$scope', '$http', '$state', 'PARSE', 'SetsFactory','$stateParams', '$cacheFactory', '$window', '$filter',
+    function ($scope, $http, $state, PARSE, SetsFactory, $stateParams, $cacheFactory, $window, $filter){
 
        var cache = $cacheFactory.get('$http');
 
@@ -26,19 +26,21 @@
         });
       };
 
-//       $scope.editGig = function (id, index) {
-//         GigFactory.edit(id).sucess( function(){
 
-//           $state.go('portal');
-// }
-//           )};
+     var orderBy = $filter('orderBy');
+      $scope.predicate = 'setSNumber';
+      $scope.reverse = false;
+      $scope.order = function(predicate) {
+        $scope.reverse = ($scope.predicate === predicate) ? !$scope.reverse : false;
+        $scope.predicate = predicate;
+      };
 
       $scope.deleteMe = function(id) {
       var deleteVenue = $window.confirm('Are you sure you want to delete?');
       if (deleteVenue) {
         SetsFactory.del(id).success( function (response) {
           cache.remove(PARSE.URL + 'classes/sets');
-          // $state.reload();
+          $state.reload();
         });
     }
   };

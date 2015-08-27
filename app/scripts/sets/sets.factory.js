@@ -17,7 +17,7 @@
         var addSet = function(setObj) {
             return $http.post(PARSE.URL + 'classes/sets', setObj, PARSE.CONFIG)
                 .success(function() {
-                    $state.go('portal');
+                    $state.go('portal.sets');
 
                 });
         };
@@ -34,7 +34,7 @@
 
                 var deleteSet = function(id) {
                     return $http.delete(PARSE.URL + 'classes/sets/' + id, PARSE.CONFIG).success(function(){
-                        $state.go('portal');
+                        $state.go('portal.sets');
                     });
                 };
 

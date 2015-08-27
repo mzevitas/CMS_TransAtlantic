@@ -21,7 +21,7 @@ angular.module('app')
 
    SetsFactory.edit(set).success( function(){
 
-      $state.go('portal');
+      $state.go('portal.sets');
 
     });
 

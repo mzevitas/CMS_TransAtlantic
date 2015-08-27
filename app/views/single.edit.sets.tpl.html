@@ -17,7 +17,7 @@
 
 
 	<!-- Enter Venues Name -->
-  <div layout layout-md="column">
+
 
     <md-input-container class="setsAdd" flex>
         <label>Set Title ie: Fado 7/31 Set 1</label>
@@ -26,15 +26,22 @@
 
 
 
+       <div layout layout-md="column">
       <md-input-container class="setsAdd" flex>
-        <label>Set Date</label>
+        <label>Gig Date</label>
         <input type="text" ng-model="s.setDate"/>
       </md-input-container>
       <md-input-container class="setsAdd" flex>
-        <label>Set Length</label>
+        <label>Serial Numer</label>
+        <input type="text" ng-model="s.setSNumber"/>
+      </md-input-container>
+      <md-input-container class="setsAdd" flex>
+        <label>Length of Set</label>
         <input type="text" ng-model="s.setLength"/>
       </md-input-container>
-    </div>
+      
+      </div>
+  
 
 
 

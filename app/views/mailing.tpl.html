@@ -1,0 +1,23 @@
+<h2 class="venueh2">Mailing List</h2>
+
+<a ui-sref="portal" class="newvenue1"><md-button aria-label="song" class="md-raised"><i class="fa fa-arrow-left"></i></md-button></a>
+
+<!-- <a ui-sref="portal.venueContact" class="newvenue" ><md-button aria-label="song" class="md-raised">Venue Contact List</md-button></a> -->
+<!-- <a ui-sref="portal.addvenue" class="newvenue" ><md-button aria-label="song" class="md-raised">Add Another Venue</md-button></a> -->
+
+
+<br>
+<hr>
+<br>
+
+
+<div class="mailingList" ng-controller="MailCtrl" style="text-align: center; margin: 0 auto;">
+	    		<h2>Secret Sauce Fan List</h2>
+	    <div class="maillist" ng-repeat="em in mails">
+	        <div>
+	            {{ em.emailAddress }}
+	        </div>
+	    </div>
+		</div>
+
+

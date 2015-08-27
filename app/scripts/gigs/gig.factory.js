@@ -17,7 +17,7 @@
         var addGig = function(gigObj) {
             return $http.post(PARSE.URL + 'classes/gigs', gigObj, PARSE.CONFIG)
                 .success(function() {
-                    $state.go('portal');
+                    $state.go('portal.gigList');
 
                 });
         };
@@ -34,7 +34,7 @@
 
                 var deleteGigs = function(id) {
                     return $http.delete(PARSE.URL + 'classes/gigs/' + id, PARSE.CONFIG).success(function(){
-                        $state.go('portal');
+                        $state.go('portal.gigList');
                     });
                 };
 

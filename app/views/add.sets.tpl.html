@@ -8,14 +8,22 @@
         <input type="text" ng-model="s.setTitle" required/>
       </md-input-container>
 
-      <md-input-container class="setsAdd">
+
+      <div layout layout-md="column">
+      <md-input-container class="setsAdd" flex>
         <label>Gig Date</label>
         <input type="text" ng-model="s.setDate"/>
       </md-input-container>
-      <md-input-container class="setsAdd">
+      <md-input-container class="setsAdd" flex>
+        <label>Serial Numer</label>
+        <input type="text" ng-model="s.setSNumber"/>
+      </md-input-container>
+      <md-input-container class="setsAdd" flex>
         <label>Length of Set</label>
         <input type="text" ng-model="s.setLength"/>
       </md-input-container>
+      
+      </div>
 
      <!--  <md-input-container class="setsAdd">
     <label>Songs</label>
