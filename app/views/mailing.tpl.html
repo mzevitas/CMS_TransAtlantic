@@ -15,7 +15,7 @@
 	    		<h2>Secret Sauce Fan List</h2>
 	    <div class="maillist" ng-repeat="em in mails">
 	        <div>
-	            {{ em.emailAddress }}
+	            <span>{{ em.emailAddress }} <div ng-click="deleteMe(s.objectId, $index)" style="width: 15px; cursor: pointer; margin-left: 10px;"><i class="fa fa-trash-o"></i></div></span>
 	        </div>
 	    </div>
 		</div>

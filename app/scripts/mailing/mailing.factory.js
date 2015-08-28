@@ -13,8 +13,15 @@
 
         };
 
+           var deleteMail = function(id) {
+                    return $http.delete(PARSE.URL + 'classes/mail/' + id, PARSE.CONFIG).success(function(){
+                        $state.go('portal.mailing');
+                    });
+                };
+
                 return {
                     get: getMail,
+                    del: deleteMail
                     
 
                 };
