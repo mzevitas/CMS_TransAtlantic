@@ -1,0 +1,20 @@
+<div class="addset">
+    <h1>Add Video</h1>
+    <form class="addformset" ng-submit="addMedia(m)" ng-controller="MediaCtrl" >
+
+	<!-- Enter Venues Name -->
+    <md-input-container class="setsAdd" >
+        <label>Video Title</label>
+        <input type="text" ng-model="m.vidtitle" required/>
+      </md-input-container>
+      <md-input-container class="setsAdd" >
+        <label>Video Link (iFrame code from Youtube)</label>
+        <input type="text" ng-model="m.vidlink" required/>
+      </md-input-container>
+       
+
+
+<md-button class="md-raised">Add Video</md-button>
+
+</form>
+</div>
