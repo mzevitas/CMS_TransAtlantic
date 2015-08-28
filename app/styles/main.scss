@@ -393,6 +393,33 @@ a{
     }
 }
 
+//*********************** Media Styles *****************************
+
+
+.imagePreview {
+    margin: 0 auto;
+    
+.imgs{
+    color: #65666b;
+height: 350px;
+    box-shadow: 1px 1px 1px 2px hsla(360, 5%, 8%, 0.3);
+    width: 160px;
+
+    overflow: auto;
+    float: left;
+    margin-right: 10px;
+    margin-top: 15px;
+    padding: 3px;
+    p{
+        text-align: center;
+    }
+    img{
+        width: 150px;
+
+    }
+  }
+}
+
 //*********************** Footer Styles ********************************
 
 footer {

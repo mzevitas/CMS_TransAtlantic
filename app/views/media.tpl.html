@@ -1,0 +1,31 @@
+<h2 class="venueh2">Media List</h2>
+
+<a ui-sref="portal" class="newvenue1"><md-button aria-label="song" class="md-raised"><i class="fa fa-arrow-left"></i></md-button></a>
+
+<a ui-sref="portal.addimage" class="newvenue" ><md-button aria-label="song" class="md-raised">Add an Image</md-button></a>
+
+
+
+
+<br>
+<hr>
+<br>
+
+
+<div class="imagePreview">
+	<h2 class="venueh2">SS Images</h2>
+
+	<div class="imgs" ng-repeat="m in medias">
+	<p>{{m.imgtitle}}</p>
+
+	<img src="{{ m.imglink }}">
+
+
+	<br>
+<md-button aria-label="song" class="md-raised" ng-click="deleteMe(m.objectId, $index)" style="width: 15px; cursor: pointer;     margin-left: 31px; "><i class="fa fa-trash-o"></i></md-button>
+	</div>
+
+</div>
+
+
+

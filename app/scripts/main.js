@@ -111,10 +111,20 @@
 		      })
 
 //**********************************Image/Video Routes**********************************
-		      .state('portal.images', {
-		      	url:'/images',
-		      	templateUrl: 'views/images.tpl.html',
-		      	controller: ''
+		      .state('portal.media', {
+		      	url:'/media',
+		      	templateUrl: 'views/media.tpl.html',
+		      	controller: 'MediaCtrl'
+		      })
+		      .state('portal.addvideo', {
+		      	url:'/addvideo',
+		      	templateUrl: 'views/add.video.tpl.html',
+		      	controller: 'MediaCtrl'
+		      })
+		      .state('portal.addimage', {
+		      	url:'/addimage',
+		      	templateUrl: 'views/add.image.tpl.html',
+		      	controller: 'MediaCtrl'
 		      })
 
 //********************************* About Routes**********************************
