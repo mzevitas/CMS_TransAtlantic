@@ -55,6 +55,11 @@
 		      	url:'/addgig',
 		      	templateUrl: 'views/add.gig.tpl.html'
 		      })
+		      .state('portal.gigview', {
+		      	url: '/gigview/{id}',
+               templateUrl: 'views/gig.view.tpl.html',
+               controller: 'SingleCtrl'
+				})
 //*************************Set Routes**********************************
 				.state('portal.sets', {
 		      	url:'/sets',
@@ -116,13 +121,15 @@
 		      .state('portal.about', {
 		      	url:'/about',
 		      	templateUrl: 'views/about.tpl.html',
-		      	controller: ''
+		      	controller: 'AboutCtrl'
 		      })
 		      .state('portal.editabout', {
 		      	url:'/editabout/{id}',
 		      	templateUrl: 'views/edit.about.tpl.html',
-		      	controller: ''
+		      	controller: 'EditAboutCtrl'
 		      })
+
+
 
 //**********************************Mailing List Routed Routes**********************************
 		      .state('portal.mailing', {

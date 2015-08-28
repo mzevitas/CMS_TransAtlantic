@@ -10,9 +10,6 @@
 <hr>
 <br>
 
-
-
-
 <div class="songlist" >
 	<table>
 	<tr class="headtr">
@@ -20,15 +17,18 @@
 		<th><a href="" ng-click="order('venuecontact1')">Contact Name</a></th>
 		<th><a href="" ng-click="order('venueemail')">Email</a></th>
 		<th><a href="" ng-click="order('venuephone')">Phone</a></th>
+		<th>View</th>
 		<th>Edit</th>
 		<th>Delete</th>
 
 	</tr>
 	<tr ng-repeat="v in venues | orderBy:predicate:reverse" class="tr-each">
-		<td><a ui-sref="portal.singleContact({id: v.objectId })" class="namehover">{{v.venue}}<a></td>
+		<td>{{v.venue}}</td>
 		<td>{{ v.venuecontact1 }} </td>
 		<td><a href="mailto:{{v.venueemail}}" class="emailhover">{{v.venueemail}}</a></td>
 		<td>{{ v.venuephone }}</td>
+
+		<td><a ui-sref="portal.singleContact({id: v.objectId })" class="songedit"><i class="fa fa-eye"></i></a></td>
 
 		<td><a ui-sref="portal.singleVenue({id: v.objectId })" class="songedit"><i class="fa fa-pencil"></i></a></td>
 		<td><div ng-click="deleteMe(v.objectId, $index)" style="width: 15px; cursor: pointer; margin-left: 10px;"><i class="fa fa-trash-o"></i></div></td>

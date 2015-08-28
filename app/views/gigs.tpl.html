@@ -10,24 +10,37 @@
 <br>
 
 
+	<div class="songlist" >
+	<table>
+	<tr class="headtr">
+		<th><a href="" ng-click="order('venueName')">Venue</a></th>
+		<th><a href="" ng-click="order('day')">Day</a></th>
+		<th><a href="" ng-click="order('date')">Date</a></th>
+		<th><a href="" ng-click="order('time')">Time</a></th>
+		<th><a href="" ng-click="order('loadin')">Load In</a></th>
+		<th><a href="" ng-click="order('soundcheck')">Sound Check</a></th>
+		<th>View</th>
+		<th>Edit</th>
+		<th>Delete</th>
+
+	</tr>
+	<tr ng-repeat="g in gigs | orderBy:predicate:reverse" class="tr-each">
+		<td>{{g.venueName}}</td>
+		<td>{{ g.day }} </td>
+		<td>{{ g.date}}</td>
+		<td>{{ g.time}}</td>
+		<td>{{ g.loadin}}</td>
+		<td>{{ g.soundcheck}}</td>
 
 
-<div class="gigspage" ng-controller="GigCtrl">
-	    
-	    <div class="portalmain">
-	        <!-- <a ui-sref=".single"> -->
-	        <div class="listGigs" ng-repeat=" g in gigs | orderBy: 'serialnumber'" id="{{ g.objectId }}">
-	            <h4 style="margin: 0;">{{ g.venueName}}</h4>
-	            <hr>
-	            <p style="margin: 4px;"><b>{{ g.day}}</b></p>
-	            <p style="margin: 4px;">{{ g.date}} at {{g.time}}</p>
-	            <p style="margin: 4px;">{{ g.address}} {{g.city}}, {{g.state}}, {{g.zip}}</p>
-	            <p style="margin: 4px;">Load-in: {{ g.loadin}} || Sound Check: {{g.soundcheck}}</p>
-	            <p style="margin: 4px;"><a href="{{g.website}}">{{g.venueName}}'s Website</a></p>
-	            <a ui-sref="portal.single({id: g.objectId})">
-	                <md-button class="md-raised">Edit Gig</md-button>
-	            </a>
-	        </div>
-	    </div>
-	</div>
+		<td><a ui-sref="portal.gigview({id: g.objectId })" class="songedit"><i class="fa fa-eye"></i></a></td>
+
+		<td><a ui-sref="portal.single({id: g.objectId })" class="songedit"><i class="fa fa-pencil"></i></a></td>
+		<td><div ng-click="deleteMe(g.objectId, $index)" style="width: 15px; cursor: pointer; margin-left: 10px;"><i class="fa fa-trash-o"></i></div></td>
+
+	</tr>
+
+	</table>
+
+</div>
 	

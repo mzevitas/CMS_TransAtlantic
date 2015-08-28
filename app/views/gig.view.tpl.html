@@ -1,0 +1,24 @@
+<h2 class="venueh2">Gigs List</h2>
+
+<a ui-sref="portal" class="newvenue1"><md-button aria-label="song" class="md-raised"><i class="fa fa-arrow-left"></i></md-button></a>
+
+<a ui-sref="portal.addgig" class="newvenue" ><md-button aria-label="song" class="md-raised">Add A Gig</md-button></a>
+
+
+<br>
+<hr>
+<br>
+
+<div class="gigviews">
+<h4 style="margin: 0; text-decoration: underline;">{{ g.venueName}}</h4>
+
+	            <p style="margin: 4px;"><b>{{ g.day}}</b></p>
+	            <p style="margin: 4px;">{{ g.date}} at {{g.time}}</p>
+	            <p style="margin: 4px;">{{ g.address}} {{g.city}}, {{g.state}}, {{g.zip}}</p>
+	            <p style="margin: 4px;">Load-in: {{ g.loadin}} || Sound Check: {{g.soundcheck}}</p>
+	            <p style="margin: 4px;"><a href="{{g.website}}">{{g.venueName}}'s Website</a></p>
+	            <a ui-sref="portal.single({id: g.objectId})">
+	                <md-button class="md-raised">Edit Gig</md-button>
+	            </a>
+
+	            </div>

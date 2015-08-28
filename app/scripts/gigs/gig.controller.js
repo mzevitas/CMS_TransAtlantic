@@ -3,8 +3,8 @@
   'use strict';
 
   angular.module('app')
-    .controller('GigCtrl', ['$scope', '$http', '$state', 'PARSE', 'GigFactory','$stateParams', '$cacheFactory', '$window',
-    function ($scope, $http, $state, PARSE, GigFactory, $stateParams, $cacheFactory, $window){
+    .controller('GigCtrl', ['$scope', '$http', '$state', 'PARSE', 'GigFactory','$stateParams', '$cacheFactory', '$window', '$filter',
+    function ($scope, $http, $state, PARSE, GigFactory, $stateParams, $cacheFactory, $window, $filter){
 
        var cache = $cacheFactory.get('$http');
 
@@ -26,12 +26,13 @@
         });
       };
 
-//       $scope.editGig = function (id, index) {
-//         GigFactory.edit(id).sucess( function(){
-
-//           $state.go('portal');
-// }
-//           )};
+    var orderBy = $filter('orderBy');
+      $scope.predicate = 'serialnumber';
+      $scope.reverse = false;
+      $scope.order = function(predicate) {
+        $scope.reverse = ($scope.predicate === predicate) ? !$scope.reverse : false;
+        $scope.predicate = predicate;
+      };
 
       $scope.deleteMe = function(id) {
       var deleteVenue = $window.confirm('Are you sure you want to delete?');
