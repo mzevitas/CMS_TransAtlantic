@@ -46,6 +46,16 @@ gulp.task('extras', function () {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('templates', function () {
+  return gulp.src('app/templates/**/*')
+    .pipe(gulp.dest('dist/templates'));
+});
+
+gulp.task('views', function () {
+  return gulp.src('app/views/**/*')
+    .pipe(gulp.dest('dist/views'));
+});
+
 gulp.task('clean', function (cb) {
   return $.cache.clearAll(cb, function() {
     return rimraf('.tmp', function () {
@@ -106,7 +116,8 @@ gulp.task('watch', ['connect', 'serve'], function () {
   gulp.watch('bower.json', ['wiredep']);
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras'], function () {
+
+gulp.task('build', ['html', 'images', 'fonts', 'extras', 'templates', 'views'], function () { 
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
