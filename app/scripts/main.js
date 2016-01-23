@@ -40,142 +40,35 @@
 
 		      })
 //**************************Gig Routes**********************************
-		      .state('portal.gigList', {
+		      .state('portal.blogList', {
 		      	url:'/gigList',
-		      	templateUrl: 'views/gigs.tpl.html',
-		      	controller: 'GigCtrl'
+		      	templateUrl: 'views/blogs.tpl.html',
+		      	controller: 'BlogCtrl'
 		      })
 		      .state('portal.single', {
 		      	url: '/single/{id}',
-               templateUrl: 'views/single.gig.tpl.html',
+               templateUrl: 'views/single.blog.tpl.html',
                controller: 'SingleCtrl'
 				})
 		      
-		      .state('portal.addgig', {
-		      	url:'/addgig',
-		      	templateUrl: 'views/add.gig.tpl.html'
+		      .state('portal.addblog', {
+		      	url:'/addblog',
+		      	templateUrl: 'views/add.blog.tpl.html'
 		      })
-		      .state('portal.gigview', {
-		      	url: '/gigview/{id}',
-               templateUrl: 'views/gig.view.tpl.html',
+		      .state('portal.blogview', {
+		      	url: '/blogview/{id}',
+               templateUrl: 'views/blog.view.tpl.html',
                controller: 'SingleCtrl'
-				})
-//*************************Set Routes**********************************
-				.state('portal.sets', {
-		      	url:'/sets',
-		      	templateUrl: 'views/sets.tpl.html',
-		      	controller: 'SetCtrl'
-		      })
-		      .state('portal.singleSet', {
-		      	url: '/singleSet/{id}',
-               templateUrl: 'views/single.edit.sets.tpl.html',
-               controller: 'SingleSetCtrl'
-				})
-
-		      .state('portal.download', {
-		      	url: '/singleSetdownload/{id}',
-               templateUrl: 'views/download.pdf.tpl.html',
-               controller: 'SingleSetCtrl'
-				})
-		      
-		      .state('portal.addset', {
-		      	url:'/addset',
-		      	templateUrl: 'views/add.sets.tpl.html'
-		      })
-//**************************Song Routes**********************************
-		      .state('portal.songList', {
-		      	url:'/songlist',
-		      	templateUrl: 'views/songs.tpl.html',
-		      	controller: 'SongCtrl'
-		      })
-		      .state('portal.singleSong', {
-		      	url: '/singleSong/{id}',
-               templateUrl: 'views/single.song.tpl.html',
-               controller: 'EditSongCtrl'
-				})
-		      
-		      .state('portal.addSong', {
-		      	url:'/addsong',
-		      	templateUrl: 'views/add.songs.tpl.html',
-		      	controller: 'SongCtrl'
-		      })
-		      .state('portal.viewLyrics', {
-		      	url:'/lyrics/{id}',
-		      	templateUrl: 'views/view.lyrics.tpl.html',
-		      	controller: 'EditSongCtrl'
-		      })
-		      .state('portal.editLyrics', {
-		      	url:'/editlyrics/{id}',
-		      	templateUrl: 'views/add.lyrics.tpl.html',
-		      	controller: 'EditSongCtrl'
-		      })
-
-//**********************************Image/Video Routes**********************************
-		      .state('portal.media', {
-		      	url:'/media',
-		      	templateUrl: 'views/media.tpl.html',
-		      	controller: 'MediaCtrl'
-		      })
-		      .state('portal.addvideo', {
-		      	url:'/addvideo',
-		      	templateUrl: 'views/add.video.tpl.html',
-		      	controller: 'MediaCtrl'
-		      })
-		      .state('portal.addimage', {
-		      	url:'/addimage',
-		      	templateUrl: 'views/add.image.tpl.html',
-		      	controller: 'MediaCtrl'
-		      })
-
-//********************************* About Routes**********************************
-		      .state('portal.about', {
-		      	url:'/about',
-		      	templateUrl: 'views/about.tpl.html',
-		      	controller: 'AboutCtrl'
-		      })
-		      .state('portal.editabout', {
-		      	url:'/editabout/{id}',
-		      	templateUrl: 'views/edit.about.tpl.html',
-		      	controller: 'EditAboutCtrl'
-		      })
+				})				
 
 
-
-//**********************************Mailing List Routed Routes**********************************
+//**************Mailing List Routed Routes**********************************
 		      .state('portal.mailing', {
 		      	url:'/mailing',
 		      	templateUrl: 'views/mailing.tpl.html',
 		      	controller: ''
 		      })
-//**********************************Venue Routes**********************************
-		      .state('portal.venueList', {
-		      	url:'/venuelist',
-		      	templateUrl: 'views/venues.tpl.html',
-		      	controller: 'VenueCtrl'
-		      })
 
-		      .state('portal.singleVenue', {
-		       url: '/singleVenue/{id}',
-               templateUrl: 'views/single.venue.tpl.html',
-               controller: 'EditVenueCtrl'
-				})
-		      .state('portal.singleContact', {
-		       url: '/singleContact/{id}',
-               templateUrl: 'views/singleContact.tpl.html',
-               controller: 'EditVenueCtrl'
-				})
-
-		      .state('portal.addvenue', {
-		      	url:'/addvenue',
-		      	templateUrl: 'views/add.venue.tpl.html',
-		      	controller: 'VenueCtrl'
-		      })
-
-		      .state('portal.venueContact', {
-		      	url:'/addContactList',
-		      	templateUrl: 'views/venue.contact.tpl.html',
-		      	controller: 'VenueCtrl'
-		      })
 
 		    })
 

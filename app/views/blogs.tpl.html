@@ -1,8 +1,8 @@
-<h2 class="venueh2">Gigs List</h2>
+<h2 class="venueh2">Blog Post</h2>
 
 <a ui-sref="portal" class="newvenue1"><md-button aria-label="song" class="md-raised"><i class="fa fa-arrow-left"></i></md-button></a>
 
-<a ui-sref="portal.addgig" class="newvenue" ><md-button aria-label="song" class="md-raised">Add A Gig</md-button></a>
+<a ui-sref="portal.addgig" class="newvenue" ><md-button aria-label="song" class="md-raised">Add A Blog</md-button></a>
 
 
 <br>
@@ -24,18 +24,18 @@
 		<th>Delete</th>
 
 	</tr>
-	<tr ng-repeat="g in gigs | orderBy:predicate:reverse" class="tr-each">
-		<td>{{g.venueName}}</td>
-		<td>{{ g.day }} </td>
-		<td>{{ g.date}}</td>
-		<td>{{ g.time}}</td>
-		<td>{{ g.loadin}}</td>
-		<td>{{ g.soundcheck}}</td>
+	<tr ng-repeat="b in blogs | orderBy:predicate:reverse" class="tr-each">
+		<td>{{b.venueName}}</td>
+		<td>{{ b.day }} </td>
+		<td>{{ b.date}}</td>
+		<td>{{ b.time}}</td>
+		<td>{{ b.loadin}}</td>
+		<td>{{ b.soundcheck}}</td>
 
 
-		<td><a ui-sref="portal.gigview({id: g.objectId })" class="songedit"><i class="fa fa-eye"></i></a></td>
+		<td><a ui-sref="portal.gigview({id: b.objectId })" class="songedit"><i class="fa fa-eye"></i></a></td>
 
-		<td><a ui-sref="portal.single({id: g.objectId })" class="songedit"><i class="fa fa-pencil"></i></a></td>
+		<td><a ui-sref="portal.single({id: b.objectId })" class="songedit"><i class="fa fa-pencil"></i></a></td>
 		<td><div ng-click="deleteMe(g.objectId, $index)" style="width: 15px; cursor: pointer; margin-left: 10px;"><i class="fa fa-trash-o"></i></div></td>
 
 	</tr>

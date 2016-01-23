@@ -1,0 +1,24 @@
+<h2 class="venueh2">BlogPost</h2>
+
+<a ui-sref="portal" class="newvenue1"><md-button aria-label="song" class="md-raised"><i class="fa fa-arrow-left"></i></md-button></a>
+
+<a ui-sref="portal.addblog" class="newvenue" ><md-button aria-label="song" class="md-raised">Add A Blog</md-button></a>
+
+
+<br>
+<hr>
+<br>
+
+<div class="gigviews">
+<h4 style="margin: 0; text-decoration: underline;">{{ b.venueName}}</h4>
+
+	            <p style="margin: 4px;"><b>{{ b.day}}</b></p>
+	            <p style="margin: 4px;">{{ b.date}} at {{b.time}}</p>
+	            <p style="margin: 4px;">{{ b.address}} {{b.city}}, {{b.state}}, {{b.zip}}</p>
+	            <p style="margin: 4px;">Load-in: {{ b.loadin}} || Sound Check: {{b.soundcheck}}</p>
+	            <p style="margin: 4px;"><a href="{{b.website}}">{{b.venueName}}'s Website</a></p>
+	            <a ui-sref="portal.single({id: b.objectId})">
+	                <md-button class="md-raised">Edit Blog</md-button>
+	            </a>
+
+	            </div>
