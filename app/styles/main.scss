@@ -5,9 +5,30 @@
 body {
     font-family: 'Karla', sans-serif;
     margin: 0 auto;
+
     h1 {
         color: #65666b;
     }
+
+    label{
+      color: hsla(0, 0%, 100%, 1);
+    }
+    input {
+      color: hsla(0, 0%, 100%, 1);
+      padding-left: 5px;
+    }
+}
+
+body {
+    background-color: hsla(216, 39%, 25%, 1);
+ background-image:
+    linear-gradient(
+      to bottom, 
+      hsla(216, 39%, 25%, 1), 
+      hsla(215, 39%, 40%, 1), 
+      hsla(215, 39%, 35%, 1),
+      hsla(216, 39%, 25%, 1)
+    );
 }
 
 body:before {
@@ -50,7 +71,7 @@ md-select {
     padding-top: 15%;
     margin: 0 auto;
     h2 {
-        color: #65666b;
+        color: #ffffff;
         margin: 0;
         text-align: center;
         font-size: 2rem;
@@ -58,22 +79,35 @@ md-select {
     .inputlog {
         width: 250px;
         margin: 0 auto;
+        color: #ffffff;
     }
     .buttonlog {
         margin: 0 auto;
         text-align: center;
     }
+     label{
+      color: hsla(0, 0%, 100%, 1);
+    }
+    .md-input-focused label {
+              color: hsla(0, 0%, 100%, 1);
+
+    }
+    input {
+      color: hsla(0, 0%, 100%, 1);
+      padding-left: 5px;
+    }
+
 }
 
 //*********************** Header Styles **************************
 header {
     height: 60px;
     padding-top: 10px;
-    background-color: #f6f6f6;
+    background-color:hsla(216, 39%, 26%, 1);
     border-bottom: solid 1px #dfdfdf;
     a {
         text-decoration: none;
-        color: #65666b;
+        color: #ffffff;
         &:hover {
             color: black;
         }
@@ -118,13 +152,14 @@ header {
 .portalmain {
     margin-bottom: 50px;
     margin: 0 auto;
+    color: #ffffff;
 }
 
 .portal-left {
     margin: 0 auto;
     h2 {
         text-align: center;
-        color: #65666b;
+        color: #ffffff;
         font-size: 2.5rem;
         margin: 0;
     }
