@@ -9,14 +9,19 @@
 <hr>
 <br>
 
-<div class="gigviews">
-<h4 style="margin: 0; text-decoration: underline;">{{ b.venueName}}</h4>
+<div class="blogView" style="text-align: center;">
+<h4 style="margin: 0; text-decoration: underline;">{{ b.title}}</h4>
 
-	            <p style="margin: 4px;"><b>{{ b.day}}</b></p>
-	            <p style="margin: 4px;">{{ b.date}} at {{b.time}}</p>
-	            <p style="margin: 4px;">{{ b.address}} {{b.city}}, {{b.state}}, {{b.zip}}</p>
-	            <p style="margin: 4px;">Load-in: {{ b.loadin}} || Sound Check: {{b.soundcheck}}</p>
-	            <p style="margin: 4px;"><a href="{{b.website}}">{{b.venueName}}'s Website</a></p>
+	            <p style="margin: 4px;"><b>{{ b.author}}</b></p>
+	            <p style="margin: 4px;"><b>{{ b.date}}</b></p>
+	            <br><br>
+	            <md-input-container class="blogsAdd">
+       
+        <textarea type="text" style="text-align: center;" ng-model="b.content" readonly></textarea>
+      </md-input-container>
+
+
+	            
 	            <a ui-sref="portal.single({id: b.objectId})">
 	                <md-button class="md-raised">Edit Blog</md-button>
 	            </a>

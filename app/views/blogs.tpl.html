@@ -10,33 +10,28 @@
 <br>
 
 
-	<div class="songlist" >
+	<div class="bloglist" >
 	<table>
 	<tr class="headtr">
-		<th><a href="" ng-click="order('venueName')">Venue</a></th>
-		<th><a href="" ng-click="order('day')">Day</a></th>
+		<th><a href="" ng-click="order('title')">Title</a></th>
+		<th><a href="" ng-click="order('author')">Author</a></th>
 		<th><a href="" ng-click="order('date')">Date</a></th>
-		<th><a href="" ng-click="order('time')">Time</a></th>
-		<th><a href="" ng-click="order('loadin')">Load In</a></th>
-		<th><a href="" ng-click="order('soundcheck')">Sound Check</a></th>
 		<th>View</th>
 		<th>Edit</th>
 		<th>Delete</th>
 
 	</tr>
 	<tr ng-repeat="b in blogs | orderBy:predicate:reverse" class="tr-each">
-		<td>{{b.venueName}}</td>
-		<td>{{ b.day }} </td>
+		<td>{{b.title}}</td>
+		<td>{{ b.author }} </td>
 		<td>{{ b.date}}</td>
-		<td>{{ b.time}}</td>
-		<td>{{ b.loadin}}</td>
-		<td>{{ b.soundcheck}}</td>
+		
 
 
-		<td><a ui-sref="portal.gigview({id: b.objectId })" class="songedit"><i class="fa fa-eye"></i></a></td>
+		<td><a ui-sref="portal.blogview({id: b.objectId })" class="songedit"><i class="fa fa-eye"></i></a></td>
 
 		<td><a ui-sref="portal.single({id: b.objectId })" class="songedit"><i class="fa fa-pencil"></i></a></td>
-		<td><div ng-click="deleteMe(g.objectId, $index)" style="width: 15px; cursor: pointer; margin-left: 10px;"><i class="fa fa-trash-o"></i></div></td>
+		<td><div ng-click="deleteMe(b.objectId, $index)" style=" cursor: pointer;"><i class="fa fa-trash-o"></i></div></td>
 
 	</tr>
 

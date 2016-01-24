@@ -10,49 +10,42 @@
 
 		 <form class="addform" ng-submit="editBlog(b)" ng-controller="EditCtrl" >
 
-	<!-- Enter Venues Name -->
-    <md-input-container class="blogsAdd">
-        <label>Venue Name</label>
-        <input type="text" ng-model="b.venueName"/>
-      </md-input-container>
+	<div layout layout-md="column">
 
-
-<div layout layout-md="column">
-
-      <!-- Enter Venues Address -->
+ 
       <md-input-container class="blogsAdd" flex>
-        <label>Venue Address</label>
-        <input type="text" ng-model="b.address"/>
+        <label style="color: #ffffff;">Post Title</label>
+        <input type="text" ng-model="b.title"/>
       </md-input-container>
-	<md-input-container class="blogsAdd" flex>
-        <label>Venue City</label>
-        <input type="text" ng-model="b.city"/>
+  <md-input-container class="blogsAdd" flex>
+        <label style="color: #ffffff;">Author</label>
+        <input type="text" ng-model="b.author"/>
       </md-input-container>
       <md-input-container class="blogsAdd" flex>
-        <label>Venue State</label>
-        <input type="text" ng-model="b.state"/>
+        <label style="color: #ffffff;">Date</label>
+        <input type="text" ng-model="b.date"/>
       </md-input-container>
-      <md-input-container class="blogsAdd" flex>
-        <label>Venue Zipcode</label>
-        <input type="text" ng-model="b.zip"/>
-      </md-input-container>
+      
 </div>
 
-	<!-- Enters Website Address -->
+  <!-- Enters Website Address -->
        <md-input-container class="blogsAdd">
-        <label>Website</label>
-        <input type="text" ng-model="b.website"/>
+        <label style="color: #ffffff;">Content</label>
+        <textarea type="text" ng-model="b.content"></textarea>
       </md-input-container>
 
 
 
+
+
 <div layout layout-md="column">
-		<md-input-container class="blogsAdd" flex>
-        <label>Gig Serial Number</label>
+    <md-input-container class="blogsAdd" flex>
+        <label style="color: #ffffff;">Post Serial Number</label>
         <input type="text" ng-model="b.serialnumber"/>
       </md-input-container>
 
 </div>
+       
        
 
        
